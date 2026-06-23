@@ -94,7 +94,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin power_in line
 				(at -5.08 -7.62 90)
 				(length 2.54)
 				(name "VIN"
@@ -112,7 +112,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin power_in line
 				(at -2.54 -7.62 90)
 				(length 2.54)
 				(name "GND"
@@ -130,7 +130,7 @@
 					)
 				)
 			)
-			(pin passive line
+			(pin bidirectional line
 				(at 1.27 -7.62 90)
 				(length 2.54)
 				(name "SCL"
@@ -148,7 +148,7 @@
 					)
 				)
 			)
-			(pin passive line
+			(pin bidirectional line
 				(at 5.08 -7.62 90)
 				(length 2.54)
 				(name "SDA"
@@ -249,7 +249,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -15.24 13.97 180)
 				(length 2.54)
 				(name "GND"
@@ -267,7 +267,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin tri_state line
 				(at -15.24 10.16 180)
 				(length 2.54)
 				(name "MISO"
@@ -285,7 +285,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -15.24 6.35 180)
 				(length 2.54)
 				(name "MOSI"
@@ -303,7 +303,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -15.24 2.54 180)
 				(length 2.54)
 				(name "SCK"
@@ -321,7 +321,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -15.24 -1.27 180)
 				(length 2.54)
 				(name "NSS"
@@ -339,7 +339,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -15.24 -5.08 180)
 				(length 2.54)
 				(name "RESET"
@@ -375,7 +375,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -15.24 -12.7 180)
 				(length 2.54)
 				(name "GND"
@@ -429,7 +429,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin output line
 				(at 15.24 6.35 0)
 				(length 2.54)
 				(name "DIO0"
@@ -501,7 +501,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 15.24 -8.89 0)
 				(length 2.54)
 				(name "GND"
@@ -631,7 +631,7 @@
 						)
 					)
 				)
-				(number ""
+				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -657,7 +657,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -6.35 5.08 180)
 				(length 2.54)
 				(name "GND"
@@ -675,7 +675,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin bidirectional line
 				(at -6.35 2.54 180)
 				(length 2.54)
 				(name "SCL"
@@ -1029,7 +1029,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -8.89 3.81 0)
 				(length 2.54)
 				(name "CS"
@@ -1047,7 +1047,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -8.89 1.27 0)
 				(length 2.54)
 				(name "SCK"
@@ -1065,7 +1065,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at -8.89 -1.27 0)
 				(length 2.54)
 				(name "SDI"
@@ -1083,7 +1083,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin tri_state line
 				(at -8.89 -3.81 0)
 				(length 2.54)
 				(name "SDO"
@@ -1101,7 +1101,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 0 -11.43 90)
 				(length 2.54)
 				(name "GND"
