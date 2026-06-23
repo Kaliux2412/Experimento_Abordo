@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "ZC323200") (type "KiCad") (uri "/home/cpacheco/Documents/Ignitia/Experimento_Abordo/KiCad/Libraries&Components/ZC323200") (options "") (descr ""))
+)

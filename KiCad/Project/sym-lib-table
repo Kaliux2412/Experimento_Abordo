@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "SGP30_Module") (type "KiCad") (uri "/home/cpacheco/Documents/Ignitia/Experimento_Abordo/KiCad/Libraries&Components/SGP30_Module.kicad_sym") (options "") (descr ""))
+	(lib (name "Ex_Abordo_Components") (type "KiCad") (uri "/home/cpacheco/Documents/Ignitia/Experimento_Abordo/KiCad/Libraries&Components/Ex_Abordo_Components.kicad_sym") (options "") (descr ""))
+)
