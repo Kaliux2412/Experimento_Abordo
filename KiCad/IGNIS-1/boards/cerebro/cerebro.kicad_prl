@@ -121,7 +121,7 @@
       "ruleAreas": true,
       "symbols": true,
       "text": true,
-      "wires": true
+      "wires": false
     }
   }
 }

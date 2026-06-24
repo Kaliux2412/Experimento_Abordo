@@ -637,15 +637,15 @@
       {
         "filename": "cerebro.kicad_sch",
         "name": "cerebro",
-        "uuid": "5b27073b-a625-45d1-8563-4fe8efc426d4"
+        "uuid": "c10887eb-b593-4701-9f01-a1eb6ad6d72d"
       }
     ],
-    "used_designators": "#PWR_3V3C1,#PWR_5VA1,#PWR_3V3A1,#FLG_VSWF1,#FLG_GNDF1,#PWR_5VB1,#FLG_GND1,#PWR_3V3B1,#FLG_BATTF1,#FLG_BATT1",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
-      "5b27073b-a625-45d1-8563-4fe8efc426d4",
+      "c10887eb-b593-4701-9f01-a1eb6ad6d72d",
       "cerebro"
     ]
   ],
