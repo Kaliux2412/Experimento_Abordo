@@ -1,0 +1,77 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "58726030-ca17-4402-bd88-69b3f1ff686d")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 38.1 38.1)
+		(size 50.8 25.4)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "7796ae84-bf83-41e2-9e03-34bbe543e942")
+		(property "Sheetname" "power" (at 38.1 37.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheets/power.kicad_sch" (at 38.1 65.0 0) (effects (font (size 1.27 1.27)) (justify left top)))
+		(instances
+			(project "IGNIS-1"
+				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "2"))))
+	)
+	(sheet
+		(at 96.52 38.1)
+		(size 50.8 25.4)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "fee0ae23-634e-4264-8493-40b8d17adbaf")
+		(property "Sheetname" "mcu" (at 96.52 37.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheets/mcu.kicad_sch" (at 96.52 65.0 0) (effects (font (size 1.27 1.27)) (justify left top)))
+		(instances
+			(project "IGNIS-1"
+				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "3"))))
+	)
+	(sheet
+		(at 154.94 38.1)
+		(size 50.8 25.4)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "bb8a2f0e-c7ba-417c-a134-9fff2193c94f")
+		(property "Sheetname" "sensors" (at 154.94 37.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheets/sensors.kicad_sch" (at 154.94 65.0 0) (effects (font (size 1.27 1.27)) (justify left top)))
+		(instances
+			(project "IGNIS-1"
+				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "4"))))
+	)
+	(sheet
+		(at 38.1 86.36)
+		(size 50.8 25.4)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "335a8c32-32cf-4d9c-93b1-920149cbd8fc")
+		(property "Sheetname" "comms_storage" (at 38.1 85.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheets/comms_storage.kicad_sch" (at 38.1 113.25999999999999 0) (effects (font (size 1.27 1.27)) (justify left top)))
+		(instances
+			(project "IGNIS-1"
+				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "5"))))
+	)
+	(sheet
+		(at 96.52 86.36)
+		(size 50.8 25.4)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "9a68c6cb-33ee-4764-9a17-8521655b31f1")
+		(property "Sheetname" "connectors" (at 96.52 85.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheets/connectors.kicad_sch" (at 96.52 113.25999999999999 0) (effects (font (size 1.27 1.27)) (justify left top)))
+		(instances
+			(project "IGNIS-1"
+				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "6"))))
+	)
+	(sheet_instances
+		(path "/" (page "1"))
+	)
+	(embedded_fonts no)
+)
