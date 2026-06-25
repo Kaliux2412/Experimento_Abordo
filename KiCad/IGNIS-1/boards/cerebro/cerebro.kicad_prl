@@ -21,7 +21,7 @@
       "footprints": true,
       "graphics": true,
       "keepouts": true,
-      "lockedItems": false,
+      "lockedItems": true,
       "otherItems": true,
       "pads": true,
       "text": true,
@@ -121,7 +121,7 @@
       "ruleAreas": true,
       "symbols": true,
       "text": true,
-      "wires": false
+      "wires": true
     }
   }
 }
