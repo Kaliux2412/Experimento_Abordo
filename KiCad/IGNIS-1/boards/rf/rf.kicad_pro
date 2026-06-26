@@ -637,13 +637,18 @@
       {
         "filename": "rf.kicad_sch",
         "name": "rf",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "cad22cd8-9d5a-4c4c-b694-e5e545797d63"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "cad22cd8-9d5a-4c4c-b694-e5e545797d63",
+      "rf"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
