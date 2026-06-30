@@ -963,7 +963,7 @@
   </defs>
   <sodipodi:namedview
      id="namedview1"
-     pagecolor="#000000"
+     pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
@@ -978,7 +978,8 @@
      inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1">
+     inkscape:current-layer="layer4"
+     showgrid="false">
     <inkscape:page
        x="0"
        y="0"
@@ -989,6 +990,18 @@
        margin="0"
        bleed="0" />
   </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Fondo">
+    <rect
+       style="fill:#000000;stroke:#ffffff;stroke-width:1.00157"
+       id="rect1"
+       width="1130.1201"
+       height="799.7522"
+       x="-4.906455"
+       y="-1.6354851" />
+  </g>
   <g
      id="g1"
      inkscape:groupmode="layer"

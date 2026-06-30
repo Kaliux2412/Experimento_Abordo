@@ -242,22 +242,23 @@
   </defs>
   <sodipodi:namedview
      id="namedview1"
-     pagecolor="#000000"
+     pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.15285985"
-     inkscape:cx="654.19401"
-     inkscape:cy="215.88402"
+     inkscape:zoom="0.6114394"
+     inkscape:cx="564.24234"
+     inkscape:cy="251.8647"
      inkscape:window-width="1500"
      inkscape:window-height="930"
      inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1">
+     inkscape:current-layer="layer3"
+     showgrid="false">
     <inkscape:page
        x="0"
        y="0"
@@ -268,6 +269,18 @@
        margin="0"
        bleed="0" />
   </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Fondo">
+    <rect
+       style="fill:#000000;stroke:#ffffff;stroke-width:1.00157"
+       id="rect1"
+       width="1135.0266"
+       height="804.65863"
+       x="-6.5419402"
+       y="-4.906455" />
+  </g>
   <g
      id="g1"
      inkscape:groupmode="layer"
