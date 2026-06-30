@@ -1,0 +1,27 @@
+# KiCad local history (repos internos de KiCad — no van a git)
+.history/
+
+# KiCad crash recovery backups
+_restore_backup_*/
+*-backups/
+
+# KiCad lock / temp files
+*.lck
+.kicad_sch
+.kicad_sch.kicad_sch
+.kicad_pcb
+_autosave-*
+
+# KiCad bak files
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.bak
+*.bck
+
+# KiCad cache
+fp-info-cache
+*.kicad_dru
+
+# Python cache
+__pycache__/
+*.pyc

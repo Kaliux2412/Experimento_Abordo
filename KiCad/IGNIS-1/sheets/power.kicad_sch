@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "6f8bfc16-73e8-4a8e-9b7d-294eb4cd5eec")
+	(uuid "09d8d0a8-aa55-4625-9abc-c4c851ae7c2d")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
@@ -357,7 +357,7 @@
 		        (name "EN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
 		      (pin power_out line (at 7.62 2.54 180) (length 2.54)
 		        (name "VOUT" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))))
-		(symbol "Device:C_Polarized"
+		(symbol "Device:C"
 				(pin_numbers
 					(hide yes)
 				)
@@ -380,7 +380,7 @@
 						(justify left)
 					)
 				)
-				(property "Value" "C_Polarized"
+				(property "Value" "C"
 					(at 0.635 -2.54 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -413,7 +413,7 @@
 						)
 					)
 				)
-				(property "Description" "Polarized capacitor"
+				(property "Description" "Unpolarized capacitor"
 					(at 0 0 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -435,7 +435,7 @@
 						)
 					)
 				)
-				(property "ki_fp_filters" "CP_*"
+				(property "ki_fp_filters" "C_*"
 					(at 0 0 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -446,12 +446,13 @@
 						)
 					)
 				)
-				(symbol "C_Polarized_0_1"
-					(rectangle
-						(start -2.286 0.508)
-						(end 2.286 1.016)
+				(symbol "C_0_1"
+					(polyline
+						(pts
+							(xy -2.032 0.762) (xy 2.032 0.762)
+						)
 						(stroke
-							(width 0)
+							(width 0.508)
 							(type default)
 						)
 						(fill
@@ -460,41 +461,18 @@
 					)
 					(polyline
 						(pts
-							(xy -1.778 2.286) (xy -0.762 2.286)
+							(xy -2.032 -0.762) (xy 2.032 -0.762)
 						)
 						(stroke
-							(width 0)
+							(width 0.508)
 							(type default)
 						)
 						(fill
 							(type none)
-						)
-					)
-					(polyline
-						(pts
-							(xy -1.27 2.794) (xy -1.27 1.778)
-						)
-						(stroke
-							(width 0)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(rectangle
-						(start 2.286 -0.508)
-						(end -2.286 -1.016)
-						(stroke
-							(width 0)
-							(type default)
-						)
-						(fill
-							(type outline)
 						)
 					)
 				)
-				(symbol "C_Polarized_1_1"
+				(symbol "C_1_1"
 					(pin passive line
 						(at 0 3.81 270)
 						(length 2.794)
@@ -927,145 +905,6 @@
 				)
 				(embedded_fonts no)
 			)
-		(symbol "power:+5V"
-				(power global)
-				(pin_numbers
-					(hide yes)
-				)
-				(pin_names
-					(offset 0)
-					(hide yes)
-				)
-				(exclude_from_sim no)
-				(in_bom yes)
-				(on_board yes)
-				(in_pos_files yes)
-				(duplicate_pin_numbers_are_jumpers no)
-				(property "Reference" "#PWR"
-					(at 0 -3.81 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Value" "+5V"
-					(at 0 3.556 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Footprint" ""
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Datasheet" ""
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Description" "Power symbol creates a global label with name \"+5V\""
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "ki_keywords" "global power"
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(symbol "+5V_0_1"
-					(polyline
-						(pts
-							(xy -0.762 1.27) (xy 0 2.54)
-						)
-						(stroke
-							(width 0)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(polyline
-						(pts
-							(xy 0 2.54) (xy 0.762 1.27)
-						)
-						(stroke
-							(width 0)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(polyline
-						(pts
-							(xy 0 0) (xy 0 2.54)
-						)
-						(stroke
-							(width 0)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-				)
-				(symbol "+5V_1_1"
-					(pin power_in line
-						(at 0 0 90)
-						(length 0)
-						(name ""
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-						(number "1"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-					)
-				)
-				(embedded_fonts no)
-			)
 		(symbol "power:PWR_FLAG"
 				(power global)
 				(pin_numbers
@@ -1190,16 +1029,16 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4ebee885-d201-458c-b417-792c22778675")
+		(uuid "9272c2d5-0dee-46bb-aae9-a5df5021bc78")
 		(property "Reference" "J1" (at 38.1 80.01 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "LiPo_1S_in" (at 38.1 97.79 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 38.1 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 38.1 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "284302f8-4f51-4399-8a1f-962a00169901"))
-		(pin "2" (uuid "352e4ef7-6077-41f7-bd92-55bd2789401c"))
+		(pin "1" (uuid "26a5f67e-357a-4f43-8536-1e24ae798558"))
+		(pin "2" (uuid "d8af8819-d479-457c-8bfa-ed057401be34"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "J1") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "J1") (unit 1))))
 	)
 	(symbol
 		(lib_id "IGNIS1:BattProtect_1S")
@@ -1209,18 +1048,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4bea52a5-b895-4402-bb91-e8c48369c63a")
+		(uuid "ec79b33b-68dd-42cb-8bb5-a71e779bfd60")
 		(property "Reference" "U1" (at 76.2 80.01 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Prot_1S_UVLO_OCP" (at 76.2 97.79 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 76.2 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 76.2 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 76.2 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "f75922ac-b9cc-4616-bf7f-093313f31edb"))
-		(pin "2" (uuid "b463ad91-92b2-49b7-bc02-2b436f675a3d"))
-		(pin "3" (uuid "165d91e9-c4e0-4e46-a114-df5b1fe5fc79"))
-		(pin "4" (uuid "69bf1285-66b9-4a72-b4d3-822c71462741"))
+		(pin "1" (uuid "f319dd8a-bd4f-496a-ade6-2252f886354a"))
+		(pin "2" (uuid "d99bd9d3-4f1c-4f43-9de8-9a1b9e6249f0"))
+		(pin "3" (uuid "5794301d-ce68-427f-80d7-0e3a27d008f9"))
+		(pin "4" (uuid "ea744d59-c1cd-4300-b710-d5ae45c6cbdb"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "U1") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "U1") (unit 1))))
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
@@ -1230,16 +1069,16 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "41b816ee-4f0c-4d57-8b5d-0e9e445dd718")
+		(uuid "d1cc3ea3-b36d-4e37-b94d-f5279b9ac572")
 		(property "Reference" "J2" (at 109.22 67.31 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "RBF_pin" (at 109.22 85.09 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 109.22 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 109.22 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "8dfb0e0c-3492-46fb-a348-b943f349cc0e"))
-		(pin "2" (uuid "262a8d4f-8348-415a-8157-6a0b92dd75da"))
+		(pin "1" (uuid "56a27d4e-0e19-4e35-b47b-c41c544fd370"))
+		(pin "2" (uuid "12dbb26d-fdca-4893-8518-0addfd5c71af"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "J2") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "J2") (unit 1))))
 	)
 	(symbol
 		(lib_id "Switch:SW_SPST")
@@ -1249,16 +1088,16 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a38a909f-d4e0-4c96-9586-001036d15215")
+		(uuid "4c6b9191-4923-47e4-8bb9-1a8ac5794859")
 		(property "Reference" "SW1" (at 134.62 77.47 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Main_SW" (at 134.62 95.25 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 134.62 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 134.62 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "5b2d632a-5bef-48d9-8e8d-124947be979e"))
-		(pin "2" (uuid "5c86594d-1ea0-40d4-895d-d784cd7db7b4"))
+		(pin "1" (uuid "8a24d4b8-7c66-4d3e-8181-91b07be88009"))
+		(pin "2" (uuid "41c1e9fb-f7fb-403f-8117-e920a40f2fc8"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "SW1") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "SW1") (unit 1))))
 	)
 	(symbol
 		(lib_id "IGNIS1:DCDC_Module")
@@ -1268,115 +1107,56 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5ecfdf40-2035-4eed-b213-29d716906f0f")
+		(uuid "b37a0651-5f32-4b07-a465-895cb367b2a2")
 		(property "Reference" "U2" (at 175.26 62.230000000000004 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "BuckBoost_3V3" (at 175.26 80.01 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 175.26 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 175.26 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 175.26 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "9a3fe475-31ba-4222-88bc-25a6066dd47a"))
-		(pin "2" (uuid "95249ca3-a460-4b61-91da-0c2ddbbb6f69"))
-		(pin "3" (uuid "137cbe45-3c8a-4d77-a539-afff2b7a6972"))
-		(pin "4" (uuid "7702a2c3-e18f-4b6c-a6ee-79e98f062c5b"))
+		(pin "1" (uuid "455a3bba-197b-42dc-b7c5-0b77a28d448e"))
+		(pin "2" (uuid "081c3e31-34b4-4740-92c2-bbd811755fa5"))
+		(pin "3" (uuid "62c231b4-9e7e-4d21-875a-511ce09e8aa4"))
+		(pin "4" (uuid "dd60d4d3-b1a6-4bd5-b256-87605c81c6eb"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "U2") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "U2") (unit 1))))
 	)
 	(symbol
-		(lib_id "IGNIS1:DCDC_Module")
-		(at 175.26 109.22 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6f728b86-e2b9-404e-b7d2-c86d36c3ebbc")
-		(property "Reference" "U3" (at 175.26 100.33 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "Boost_5V" (at 175.26 118.11 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 175.26 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 175.26 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "96e6df83-87ec-4fe1-990c-9c9cc893000c"))
-		(pin "2" (uuid "1dda5100-3c5e-44dd-9e9b-7882d97acc4f"))
-		(pin "3" (uuid "66bdfd89-06b9-4645-b292-66ee7e500a3b"))
-		(pin "4" (uuid "3503d070-bad7-44b8-9b05-a87874563d60"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "U3") (unit 1))))
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 154.94 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a74aef89-fb87-46a8-95dc-6de7fd741392")
+		(uuid "9aa69e8f-3f09-452a-aa37-0cbf6ec92445")
 		(property "Reference" "C1" (at 154.94 87.63 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "22uF" (at 154.94 105.41 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 154.94 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 154.94 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 154.94 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "b35258e1-5978-46b0-91e1-e6344efc0417"))
-		(pin "2" (uuid "1cf0575e-d95e-4ca4-9fbd-7d14932cefd7"))
+		(pin "1" (uuid "13cfd967-c035-4e0a-980b-2b8a6ae363b4"))
+		(pin "2" (uuid "a2c4ac9f-28b7-40e0-840d-04f92f7e1dfa"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "C1") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "C1") (unit 1))))
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 198.12 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "26b0704e-d8eb-4785-b223-184c506d090b")
+		(uuid "2a5a9c76-1777-45d2-b2a7-b9577df3da05")
 		(property "Reference" "C2" (at 198.12 62.230000000000004 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100uF" (at 198.12 80.01 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 198.12 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 198.12 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 198.12 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "bc334b48-b446-4167-b1c3-796e0b12deac"))
-		(pin "2" (uuid "c40c9c50-a06f-4fbe-bb62-8696f4c6bd6f"))
+		(pin "1" (uuid "b173efee-a26a-4c7d-9a9b-ff8d59c1718a"))
+		(pin "2" (uuid "a1175453-2fcb-48ab-9f4a-ef9ae83c5ce5"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "C2") (unit 1))))
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 210.82 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b537b2a4-eb61-43fa-8103-2f6c7936e637")
-		(property "Reference" "C3" (at 210.82 62.230000000000004 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "100uF" (at 210.82 80.01 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 210.82 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 210.82 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "fa1e347b-77d8-42bd-bd7f-19d7e48a73a7"))
-		(pin "2" (uuid "5dac82f8-38d7-4819-b7ca-d5779df68cb3"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "C3") (unit 1))))
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 198.12 109.22 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "14c1659f-aaf3-4017-bd11-326391848995")
-		(property "Reference" "C4" (at 198.12 100.33 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "220uF" (at 198.12 118.11 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 198.12 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 198.12 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "937a5251-ec7d-4ef1-8952-ec0dae8f8cb5"))
-		(pin "2" (uuid "58e884d5-849a-4c49-bbb4-094e36ba7801"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "C4") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "C2") (unit 1))))
 	)
 	(symbol
 		(lib_id "power:+BATT")
@@ -1386,15 +1166,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6bd56546-1034-41ca-ad07-95d6c1f1aadb")
+		(uuid "31266adc-e54d-48da-94b5-b79c4803c972")
 		(property "Reference" "#PWR_BATT1" (at 33.02 80.01 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "+BATT" (at 33.02 97.79 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 33.02 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 33.02 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "6461b4e2-30f6-4d2c-8e60-ded7c45f0fda"))
+		(pin "1" (uuid "2766b627-3e2f-468d-b1dd-6a4fec9ee294"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_BATT1") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_BATT1") (unit 1))))
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1404,15 +1184,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0509b39e-b0f3-4205-ac4f-f8caf12115e8")
+		(uuid "0515cefb-9602-4dae-be59-8c6e0a6fb4b9")
 		(property "Reference" "#PWR_G1" (at 33.02 82.55000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "GND" (at 33.02 100.33000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 33.02 91.44000000000001 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 33.02 91.44000000000001 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "1079fd42-cc43-44fe-9c8a-ea77b68ca939"))
+		(pin "1" (uuid "92181dbc-77ed-43a2-a3d0-f6ceb9540deb"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_G1") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_G1") (unit 1))))
 	)
 	(symbol
 		(lib_id "power:+BATT")
@@ -1422,15 +1202,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0485090a-4224-40a3-b7ac-01efc256a5da")
+		(uuid "155273e4-c6ef-4d08-8281-0594bae4f987")
 		(property "Reference" "#PWR_BATT2" (at 68.58 77.47 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "+BATT" (at 68.58 95.25 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 68.58 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 68.58 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "7fd4164a-c93e-4cd5-ba3a-227a3e41163a"))
+		(pin "1" (uuid "f7b31023-363d-4ab0-8327-9d466cacf1b0"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_BATT2") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_BATT2") (unit 1))))
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1440,17 +1220,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a3b06ce3-33fa-4bd2-8d23-369ae6999f6e")
+		(uuid "2cdde39c-1899-4b94-be81-dd047f477a14")
 		(property "Reference" "#PWR_G2" (at 68.58 82.55000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "GND" (at 68.58 100.33000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 68.58 91.44000000000001 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 68.58 91.44000000000001 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "74ded574-fe3e-4524-8dd8-80de0a12f86e"))
+		(pin "1" (uuid "ec20125d-b9b8-472a-8644-bc0bc1792858"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_G2") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_G2") (unit 1))))
 	)
-	(label "VSYS" (at 83.82000000000001 86.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "62a5fa51-870f-4f44-8b21-4b1ef79984d5"))
+	(label "VSYS" (at 83.82000000000001 86.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3d6925fd-7e95-40e2-9527-5a0d77ed624c"))
 	(symbol
 		(lib_id "power:GND")
 		(at 83.82000000000001 91.44000000000001 0)
@@ -1459,21 +1239,21 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "59af446e-17f7-48bd-809c-8770d9867aa9")
+		(uuid "6a145d47-0b8d-4f0a-a368-0dba5f7273a0")
 		(property "Reference" "#PWR_G3" (at 83.82000000000001 82.55000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "GND" (at 83.82000000000001 100.33000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 83.82000000000001 91.44000000000001 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 83.82000000000001 91.44000000000001 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "74806e3a-bd62-4365-ae51-71a7db21deca"))
+		(pin "1" (uuid "361d6751-11d5-49b2-9ba1-37447849e6a0"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_G3") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_G3") (unit 1))))
 	)
-	(label "VSYS" (at 104.14 76.2 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "760035c3-4bf7-417f-8dc7-aa07d0066345"))
-	(label "VRBF" (at 104.14 78.74000000000001 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6be867df-7223-42b1-99f8-7045d8589fed"))
-	(label "VRBF" (at 129.54 86.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1de67ed0-22eb-430d-beea-59d4e78fa018"))
-	(label "VSW" (at 139.70000000000002 86.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bf981092-46ef-4c66-98cb-bfdc8dccd9db"))
-	(label "VSW" (at 167.64 68.58 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5f17725c-ccb4-4407-8532-1acade6f4326"))
+	(label "VSYS" (at 104.14 76.2 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "d7798e7d-2aa1-4c4f-a702-749c2f04cf91"))
+	(label "VRBF" (at 104.14 78.74000000000001 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3f9abc76-3b59-4cbf-bb27-468b07b9f842"))
+	(label "VRBF" (at 129.54 86.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ae7a1eeb-bac6-40c7-974c-a9f24fc63770"))
+	(label "VSW" (at 139.70000000000002 86.36 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "696290b6-3f7c-49f9-81b4-029fcdd110c8"))
+	(label "VSW" (at 167.64 68.58 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "34672861-a3e3-44ab-9c9c-bfb99fc48437"))
 	(symbol
 		(lib_id "power:GND")
 		(at 167.64 73.66000000000001 0)
@@ -1482,17 +1262,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "51f82de7-7a73-4cb6-b360-281d32b98071")
+		(uuid "a772c3d1-5ce8-4a69-a00c-fd1592e41982")
 		(property "Reference" "#PWR_G4" (at 167.64 64.77000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "GND" (at 167.64 82.55000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 167.64 73.66000000000001 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 167.64 73.66000000000001 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "60fd7603-aa29-46af-9c25-749becb68efc"))
+		(pin "1" (uuid "b99acf50-8a2d-4dc9-a2d2-48edd0054a4c"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_G4") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_G4") (unit 1))))
 	)
-	(label "VSW" (at 167.64 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8b277c73-e9a9-4b24-b1d7-3f26ec9921ac"))
+	(label "VSW" (at 167.64 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "68392eb2-2844-4fdb-a3bc-75396a383c94"))
 	(symbol
 		(lib_id "power:+3V3")
 		(at 182.88 68.58 0)
@@ -1501,55 +1281,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7340f64e-4723-4d08-9fee-4ec68f66de75")
-		(property "Reference" "#PWR_3V3A" (at 182.88 59.69 0) (effects (font (size 1.27 1.27))))
+		(uuid "864b7f05-59d9-442e-84fc-eaa169a218a9")
+		(property "Reference" "#PWR_3V3A1" (at 182.88 59.69 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "+3V3" (at 182.88 77.47 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 182.88 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 182.88 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "e31ae219-3837-41d0-98c8-00434b16253e"))
+		(pin "1" (uuid "913d9257-4d35-4f0d-b1aa-8d25f79b243c"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_3V3A") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_3V3A1") (unit 1))))
 	)
-	(label "VSW" (at 167.64 106.67999999999999 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c0a46c41-0e37-498a-af79-ca5bdd562f1c"))
-	(symbol
-		(lib_id "power:GND")
-		(at 167.64 111.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fbd2a90c-e178-4aa3-b5a5-5842d79052ba")
-		(property "Reference" "#PWR_G5" (at 167.64 102.87 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "GND" (at 167.64 120.65 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 167.64 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 167.64 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "04ab0ab4-c204-4f99-b43c-b613e03e96d9"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_G5") (unit 1))))
-	)
-	(label "VSW" (at 167.64 109.22 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1489b926-51d8-4c95-92c7-d0ce121d987c"))
-	(symbol
-		(lib_id "power:+5V")
-		(at 182.88 106.67999999999999 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "25ff899e-e441-4f15-bcd9-6f41d204e685")
-		(property "Reference" "#PWR_5VA" (at 182.88 97.78999999999999 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "+5V" (at 182.88 115.57 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 182.88 106.67999999999999 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 182.88 106.67999999999999 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "a6387415-5a3c-43ef-8062-89691a94d909"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_5VA") (unit 1))))
-	)
-	(label "VSW" (at 154.94 92.71 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "bb4396ae-40b5-4f25-afba-33d4d6be3acf"))
+	(label "VSW" (at 154.94 92.71 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ec4cbdd4-99eb-47f5-9ed4-15bbf4f61511"))
 	(symbol
 		(lib_id "power:GND")
 		(at 154.94 100.33 0)
@@ -1558,15 +1300,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "70216563-4b8b-4c93-8bbf-369b9ba34695")
+		(uuid "cc103150-6f92-4df0-a0dc-56d2ead6b392")
 		(property "Reference" "#PWR_GC1" (at 154.94 91.44 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "GND" (at 154.94 109.22 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 154.94 100.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 154.94 100.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "aafbcf42-e069-4a6a-a186-66fa9af11b05"))
+		(pin "1" (uuid "79c42bee-d34e-4285-acb8-96060a367690"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_GC1") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_GC1") (unit 1))))
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -1576,15 +1318,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d3eed3bc-b2e7-44c4-b99b-ffbb9b1c5711")
-		(property "Reference" "#PWR_3V3B" (at 198.12 58.42 0) (effects (font (size 1.27 1.27))))
+		(uuid "96e0f645-1067-4293-9d6a-5f04f646c1ba")
+		(property "Reference" "#PWR_3V3B1" (at 198.12 58.42 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "+3V3" (at 198.12 76.2 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 198.12 67.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 198.12 67.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "42057383-efab-4792-a012-fabc23dae425"))
+		(pin "1" (uuid "97d944bf-2a99-4e09-a308-f13a37f773bb"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_3V3B") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_3V3B1") (unit 1))))
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1594,89 +1336,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "35649cab-192d-4469-8271-441ec1dfccbc")
+		(uuid "6a346c28-ccff-4efd-85d1-2ac038763c27")
 		(property "Reference" "#PWR_GC2" (at 198.12 66.04 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "GND" (at 198.12 83.82000000000001 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 198.12 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 198.12 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "47771ca4-1beb-46c4-b484-36659c829388"))
+		(pin "1" (uuid "48ee5a8f-d897-4f5b-9b02-775e419f8bd0"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_GC2") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#PWR_GC2") (unit 1))))
 	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 210.82 67.31 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a496743a-b276-49ee-999b-411f63e24985")
-		(property "Reference" "#PWR_3V3C" (at 210.82 58.42 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "+3V3" (at 210.82 76.2 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 210.82 67.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 210.82 67.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "d5366722-7808-48f0-9bb7-222ec9dfdda7"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_3V3C") (unit 1))))
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 210.82 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "afe1c34b-c46e-44a4-b1d1-709ba6124b8d")
-		(property "Reference" "#PWR_GC3" (at 210.82 66.04 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "GND" (at 210.82 83.82000000000001 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 210.82 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 210.82 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "62d26412-3c9f-421c-b17c-2b660a76a6ef"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_GC3") (unit 1))))
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 198.12 105.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0d6437d7-d586-47dc-a263-a8627cc78637")
-		(property "Reference" "#PWR_5VB" (at 198.12 96.52 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "+5V" (at 198.12 114.3 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 198.12 105.41 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 198.12 105.41 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "0b850c68-6c70-473f-9e4d-d3006fc981ef"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_5VB") (unit 1))))
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 198.12 113.03 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "89aa07b3-e206-4847-b0ef-a585a76f4a8d")
-		(property "Reference" "#PWR_GC4" (at 198.12 104.14 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "GND" (at 198.12 121.92 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 198.12 113.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 198.12 113.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "ef3308b8-909e-4f2b-8c52-b0fa23353839"))
-		(instances
-			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#PWR_GC4") (unit 1))))
-	)
-	(wire (pts (xy 38.1 114.3) (xy 38.1 109.22)) (stroke (width 0) (type default)) (uuid "cce346b4-0d75-4fa2-85ce-183dca9f9ff2"))
+	(wire (pts (xy 38.1 114.3) (xy 38.1 109.22)) (stroke (width 0) (type default)) (uuid "e883cc7d-f847-4f73-ae2e-b2a24c7c764e"))
 	(symbol
 		(lib_id "power:+BATT")
 		(at 38.1 109.22 0)
@@ -1685,15 +1355,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "242952c4-6a3f-4e45-8d86-26c6db64a3fb")
-		(property "Reference" "#FLG_BATT" (at 38.1 100.33 0) (effects (font (size 1.27 1.27))))
+		(uuid "9b380acd-29c3-4d95-a917-8a4194f7ad03")
+		(property "Reference" "#FLG_BATT1" (at 38.1 100.33 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "+BATT" (at 38.1 118.11 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 38.1 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 38.1 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "a7f9a439-82f2-47e6-acb3-9465a8f32dc6"))
+		(pin "1" (uuid "844280c6-97a4-491a-9cc6-a73558cd4e0f"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#FLG_BATT") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#FLG_BATT1") (unit 1))))
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -1703,17 +1373,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "71db9ccd-2c5a-4219-b7d3-c117cd5e9f5f")
-		(property "Reference" "#FLG_BATTF" (at 38.1 105.41 0) (effects (font (size 1.27 1.27))))
+		(uuid "2312d5e7-ff71-4a44-96c1-c6349d021570")
+		(property "Reference" "#FLG_BATTF1" (at 38.1 105.41 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "PWR_FLAG" (at 38.1 123.19 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 38.1 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 38.1 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "5e009032-79dc-4e29-8624-50e6f443babd"))
+		(pin "1" (uuid "89766b9d-433c-4c58-a487-00c012f37f21"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#FLG_BATTF") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#FLG_BATTF1") (unit 1))))
 	)
-	(wire (pts (xy 50.8 114.3) (xy 50.8 109.22)) (stroke (width 0) (type default)) (uuid "5677713f-91f6-4cad-839e-6ebc11d66f73"))
+	(wire (pts (xy 50.8 114.3) (xy 50.8 109.22)) (stroke (width 0) (type default)) (uuid "a16fa216-73b2-4d42-839a-e7c8b3623d22"))
 	(symbol
 		(lib_id "power:GND")
 		(at 50.8 109.22 0)
@@ -1722,15 +1392,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3358877c-bd22-4b20-be1e-8384ffde92e3")
-		(property "Reference" "#FLG_GND" (at 50.8 100.33 0) (effects (font (size 1.27 1.27))))
+		(uuid "bfdad673-d227-47d8-9902-98c96d9575e6")
+		(property "Reference" "#FLG_GND1" (at 50.8 100.33 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "GND" (at 50.8 118.11 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 50.8 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 50.8 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "109d06f8-6623-4d57-8647-560e36999737"))
+		(pin "1" (uuid "b6ae2188-3945-469d-8721-2ba0106e256f"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#FLG_GND") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#FLG_GND1") (unit 1))))
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -1740,18 +1410,18 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fc03136d-ba66-4d79-8f21-586b042f2553")
-		(property "Reference" "#FLG_GNDF" (at 50.8 105.41 0) (effects (font (size 1.27 1.27))))
+		(uuid "d549df95-ffa3-4d80-be39-c8d82f78c213")
+		(property "Reference" "#FLG_GNDF1" (at 50.8 105.41 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "PWR_FLAG" (at 50.8 123.19 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 50.8 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 50.8 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "771381c1-c4e3-4d99-8dd0-e3bb4116ee2d"))
+		(pin "1" (uuid "47af74d7-1575-45d1-94df-06fce075f056"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#FLG_GNDF") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#FLG_GNDF1") (unit 1))))
 	)
-	(wire (pts (xy 63.5 114.3) (xy 63.5 109.22)) (stroke (width 0) (type default)) (uuid "da63a86f-8cb1-4d07-9fca-a7390f9869ae"))
-	(label "VSW" (at 63.5 109.22 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8428d73d-2d84-4f21-aaca-80de15f29326"))
+	(wire (pts (xy 63.5 114.3) (xy 63.5 109.22)) (stroke (width 0) (type default)) (uuid "9a4c5c67-ab52-42df-b25b-7d86dd95c116"))
+	(label "VSW" (at 63.5 109.22 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "cadf63d1-bb48-48a1-8575-44a2ef8f6dd9"))
 	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 63.5 114.3 0)
@@ -1760,17 +1430,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b97f1538-2b72-4652-9c7b-de7c26d399e2")
-		(property "Reference" "#FLG_VSWF" (at 63.5 105.41 0) (effects (font (size 1.27 1.27))))
+		(uuid "6aaa27b1-e1a2-4c42-8445-51d26469e239")
+		(property "Reference" "#FLG_VSWF1" (at 63.5 105.41 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "PWR_FLAG" (at 63.5 123.19 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "" (at 63.5 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 63.5 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "02f631d5-4700-47ce-b6c9-692ef14e37b1"))
+		(pin "1" (uuid "45a8318a-7057-4c2e-a846-c6914fe798b4"))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d/7796ae84-bf83-41e2-9e03-34bbe543e942" (reference "#FLG_VSWF") (unit 1))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/4e095549-4f3b-4cc3-b38c-18e7bfb10b0d" (reference "#FLG_VSWF1") (unit 1))))
 	)
-	(text "IGNIS-1 -- Alimentacion (LiPo 1S -> 3V3 buck-boost + 5V boost)" (at 38.1 33.02 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "bce4bdeb-f237-4f9f-bf28-d6c8c4b6abef"))
-	(text "VSW = riel conmutado tras RBF+SW. 5V: MQ-135 heater + sensor PM." (at 38.1 38.1 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "a74b3e65-ac85-46af-89f3-9c06d4e16f91"))
+	(text "IGNIS-1 -- Alimentacion (LiPo 1S -> 3V3 buck-boost + 5V boost)" (at 38.1 33.02 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "ca2e4e09-056e-45eb-a16c-b45330e22533"))
+	(text "VSW = riel conmutado tras RBF+SW. 5V: MQ-135 heater + sensor PM." (at 38.1 38.1 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "54a12fdc-c901-452e-8c5c-017072417a6a"))
 	(embedded_fonts no)
 )

@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "58726030-ca17-4402-bd88-69b3f1ff686d")
+	(uuid "5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2")
 	(paper "A4")
 	(lib_symbols)
 	(sheet
@@ -11,12 +11,12 @@
 		(fields_autoplaced yes)
 		(stroke (width 0.1524) (type solid))
 		(fill (color 0 0 0 0.0000))
-		(uuid "7796ae84-bf83-41e2-9e03-34bbe543e942")
+		(uuid "4e095549-4f3b-4cc3-b38c-18e7bfb10b0d")
 		(property "Sheetname" "power" (at 38.1 37.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
 		(property "Sheetfile" "sheets/power.kicad_sch" (at 38.1 65.0 0) (effects (font (size 1.27 1.27)) (justify left top)))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "2"))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2" (page "2"))))
 	)
 	(sheet
 		(at 96.52 38.1)
@@ -24,12 +24,12 @@
 		(fields_autoplaced yes)
 		(stroke (width 0.1524) (type solid))
 		(fill (color 0 0 0 0.0000))
-		(uuid "fee0ae23-634e-4264-8493-40b8d17adbaf")
+		(uuid "f56dc1fd-2a5b-41bc-ad5f-d161a7549f10")
 		(property "Sheetname" "mcu" (at 96.52 37.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
 		(property "Sheetfile" "sheets/mcu.kicad_sch" (at 96.52 65.0 0) (effects (font (size 1.27 1.27)) (justify left top)))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "3"))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2" (page "3"))))
 	)
 	(sheet
 		(at 154.94 38.1)
@@ -37,12 +37,12 @@
 		(fields_autoplaced yes)
 		(stroke (width 0.1524) (type solid))
 		(fill (color 0 0 0 0.0000))
-		(uuid "bb8a2f0e-c7ba-417c-a134-9fff2193c94f")
+		(uuid "0e642ffe-e4b5-4a4f-ba35-204ac7eed391")
 		(property "Sheetname" "sensors" (at 154.94 37.4 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
 		(property "Sheetfile" "sheets/sensors.kicad_sch" (at 154.94 65.0 0) (effects (font (size 1.27 1.27)) (justify left top)))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "4"))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2" (page "4"))))
 	)
 	(sheet
 		(at 38.1 86.36)
@@ -50,12 +50,12 @@
 		(fields_autoplaced yes)
 		(stroke (width 0.1524) (type solid))
 		(fill (color 0 0 0 0.0000))
-		(uuid "335a8c32-32cf-4d9c-93b1-920149cbd8fc")
+		(uuid "ecc3c020-1a6d-452e-abb6-add214c77511")
 		(property "Sheetname" "comms_storage" (at 38.1 85.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
 		(property "Sheetfile" "sheets/comms_storage.kicad_sch" (at 38.1 113.25999999999999 0) (effects (font (size 1.27 1.27)) (justify left top)))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "5"))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2" (page "5"))))
 	)
 	(sheet
 		(at 96.52 86.36)
@@ -63,12 +63,21 @@
 		(fields_autoplaced yes)
 		(stroke (width 0.1524) (type solid))
 		(fill (color 0 0 0 0.0000))
-		(uuid "9a68c6cb-33ee-4764-9a17-8521655b31f1")
+		(uuid "0697f7f8-4344-45b0-ac19-3a2f447175b3")
 		(property "Sheetname" "connectors" (at 96.52 85.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
 		(property "Sheetfile" "sheets/connectors.kicad_sch" (at 96.52 113.25999999999999 0) (effects (font (size 1.27 1.27)) (justify left top)))
 		(instances
 			(project "IGNIS-1"
-				(path "/58726030-ca17-4402-bd88-69b3f1ff686d" (page "6"))))
+				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2" (page "6"))))
+	)
+	(text "*** NO CANONICO / SOLO REFERENCIA ***\nDiseno real y fabricacion: boards/{cerebro,rf,sensores}.\nEste jerarquico NO refleja los cambios post-split\n(footprints HandSolder, caps polarizados THT, U1 eliminado).\nNO editar ni fabricar desde aqui."
+		(exclude_from_sim no)
+		(at 38.1 20.0 0)
+		(effects
+			(font (size 2.54 2.54) (bold yes))
+			(justify left bottom)
+		)
+		(uuid "41426e0b-1a1e-4999-b985-fcad04aa67d2")
 	)
 	(sheet_instances
 		(path "/" (page "1"))

@@ -637,13 +637,18 @@
       {
         "filename": "sensores.kicad_sch",
         "name": "sensores",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "74f32100-bf0b-42ea-8f65-2ce920f7760a"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "74f32100-bf0b-42ea-8f65-2ce920f7760a",
+      "sensores"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
