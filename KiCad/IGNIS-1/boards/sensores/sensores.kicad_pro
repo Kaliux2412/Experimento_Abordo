@@ -466,7 +466,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -497,7 +497,7 @@
         "clearance": 0.2,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": -1,
+        "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "tuning_profile": "",
@@ -640,7 +640,7 @@
         "uuid": "74f32100-bf0b-42ea-8f65-2ce920f7760a"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR_S16",
     "variants": []
   },
   "sheets": [

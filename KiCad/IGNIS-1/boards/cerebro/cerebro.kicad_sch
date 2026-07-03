@@ -2034,159 +2034,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "IGNIS1:DCDC_Module"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -5.08 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "DCDC_Module"
-				(at -5.08 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "DC-DC converter module (VIN/GND/EN/VOUT)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "DCDC_Module_0_1"
-				(rectangle
-					(start -5.08 5.08)
-					(end 5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "DCDC_Module_1_1"
-				(pin power_in line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "EN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "IGNIS1:ESP32_DevKit_40"
 			(pin_names
 				(offset 1.016)
@@ -2574,7 +2421,7 @@
 				(pin power_in line
 					(at -17.78 -19.05 0)
 					(length 2.54)
-					(name "5V"
+					(name "3V3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2610,7 +2457,7 @@
 				(pin power_in line
 					(at -17.78 -24.13 0)
 					(length 2.54)
-					(name "GND"
+					(name "5V"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2978,6 +2825,195 @@
 						)
 					)
 					(number "40"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "IGNIS1:TPS63020"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -5.08 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TPS63020"
+				(at -5.08 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "IGNIS1:TPS63020_module"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "TPS63020 buck-boost module (VIN/VOUT/GND/EN/PS/PG). Pads GND/VIN/VOUT dobles unidos por num de pad. VOUT=3V3."
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TPS63020_0_1"
+				(rectangle
+					(start -5.08 6.35)
+					(end 5.08 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TPS63020_1_1"
+				(pin power_in line
+					(at -7.62 3.81 0)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 3.81 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 -3.81 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 1.27 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -1.27 0)
+					(length 2.54)
+					(name "PS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 7.62 -3.81 180)
+					(length 2.54)
+					(name "PG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3965,6 +4001,10 @@
 		(uuid "a909be16-8228-41ee-8828-bc84e1a6a53e")
 	)
 	(no_connect
+		(at 186.69 76.2)
+		(uuid "adc8bf07-f7e5-490c-8420-879f4e6d62d9")
+	)
+	(no_connect
 		(at 104.14 151.13)
 		(uuid "b04b973d-cb2c-4e8c-a9fc-c90a3d618c6a")
 	)
@@ -3979,6 +4019,10 @@
 	(no_connect
 		(at 104.14 110.49)
 		(uuid "ce2351f0-1501-4b78-9fca-f47fec46204c")
+	)
+	(no_connect
+		(at 104.14 156.21)
+		(uuid "d6cc9e99-4792-4a27-ae4a-708085350176")
 	)
 	(no_connect
 		(at 233.68 54.61)
@@ -3997,6 +4041,16 @@
 			(type default)
 		)
 		(uuid "00f8e91c-4759-4053-9537-a4eee7148f83")
+	)
+	(wire
+		(pts
+			(xy 189.23 68.58) (xy 186.69 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04ec7da0-665d-4d04-8a17-b522ab3c3830")
 	)
 	(wire
 		(pts
@@ -4070,23 +4124,13 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 71.12) (xy 167.64 71.12)
+			(xy 167.64 68.58) (xy 171.45 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1fb51f35-9425-4cb0-975e-8f7f62973373")
-	)
-	(wire
-		(pts
-			(xy 171.45 73.66) (xy 167.64 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3783dc4b-12f9-4ab3-a075-1cbe0f66988f")
+		(uuid "3980e317-a21c-47d1-ac97-c172b0937cfa")
 	)
 	(wire
 		(pts
@@ -4320,6 +4364,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 73.66) (xy 171.45 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a8cbe06-ce03-415f-a8fe-ab5712d5cbb9")
+	)
+	(wire
+		(pts
 			(xy 162.56 148.59) (xy 139.7 148.59)
 		)
 		(stroke
@@ -4420,6 +4474,16 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 71.12) (xy 171.45 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8af34e5-595a-48c6-a2b1-ddb05ea46c25")
+	)
+	(wire
+		(pts
 			(xy 146.05 128.27) (xy 139.7 128.27)
 		)
 		(stroke
@@ -4457,6 +4521,16 @@
 			(type default)
 		)
 		(uuid "c4466eb4-eb83-4f60-87a0-1681253c3db9")
+	)
+	(wire
+		(pts
+			(xy 168.91 76.2) (xy 171.45 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c64f077f-7f9f-4cd2-960b-a479f75bbbd6")
 	)
 	(wire
 		(pts
@@ -4500,16 +4574,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 156.21) (xy 90.17 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6cc9e99-4792-4a27-ae4a-708085350175")
-	)
-	(wire
-		(pts
 			(xy 186.69 100.33) (xy 186.69 102.87)
 		)
 		(stroke
@@ -4527,16 +4591,6 @@
 			(type default)
 		)
 		(uuid "d841112d-d75f-44f1-8ec0-fa6e6ebbf03d")
-	)
-	(wire
-		(pts
-			(xy 171.45 68.58) (xy 167.64 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8b5bdfb-a32a-4711-ad3e-d288cb01f684")
 	)
 	(wire
 		(pts
@@ -4698,16 +4752,6 @@
 		)
 		(uuid "232d0e27-bddf-490b-bb63-7f447d6646bc")
 	)
-	(label "VSW"
-		(at 167.64 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2e7e3e85-b2e1-42f2-a05c-4882edf4e07b")
-	)
 	(label "VRBF"
 		(at 124.46 67.31 0)
 		(effects
@@ -4777,6 +4821,16 @@
 			(justify left bottom)
 		)
 		(uuid "bf6e3a3a-30d7-42e1-b2de-d88bf7df0373")
+	)
+	(label "VSW"
+		(at 166.37 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d77c5b7f-1ee2-48f0-a7aa-18e88e7f4165")
 	)
 	(label "BUZZ_C"
 		(at 245.11 115.57 0)
@@ -5497,7 +5551,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 167.64 73.66 0)
+		(at 168.91 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5507,7 +5561,7 @@
 		(dnp no)
 		(uuid "19338725-e211-433e-8b33-a6e0e8c575ec")
 		(property "Reference" "#PWR_G4"
-			(at 167.64 64.77 0)
+			(at 168.91 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5518,7 +5572,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.116 77.724 0)
+			(at 167.386 80.264 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5528,7 +5582,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 73.66 0)
+			(at 168.91 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5539,7 +5593,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 73.66 0)
+			(at 168.91 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5550,7 +5604,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 73.66 0)
+			(at 168.91 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5916,8 +5970,8 @@
 		)
 	)
 	(symbol
-		(lib_id "IGNIS1:DCDC_Module")
-		(at 179.07 71.12 0)
+		(lib_id "IGNIS1:TPS63020")
+		(at 179.07 72.39 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5927,7 +5981,7 @@
 		(dnp no)
 		(uuid "2817d503-a936-4b52-b38d-e0b63ba6ae6b")
 		(property "Reference" "U2"
-			(at 179.07 64.516 0)
+			(at 179.07 64.008 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5936,8 +5990,8 @@
 				)
 			)
 		)
-		(property "Value" "BuckBoost_3V3"
-			(at 180.848 77.724 0)
+		(property "Value" "TPS63020"
+			(at 179.07 80.264 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5946,8 +6000,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 179.07 71.12 0)
+		(property "Footprint" "IGNIS1:TPS63020_module"
+			(at 179.07 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5958,7 +6012,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 179.07 71.12 0)
+			(at 179.07 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5968,8 +6022,9 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 179.07 71.12 0)
+		(property "Description" "TPS63020 buck-boost module (VIN/VOUT/GND/EN/PS/PG). Pads GND/VIN/VOUT dobles unidos por num de pad. VOUT=3V3."
+			(at 179.07 72.39 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5989,6 +6044,12 @@
 		)
 		(pin "4"
 			(uuid "58eac265-276d-4e56-9c2e-21ed37cda1b3")
+		)
+		(pin "6"
+			(uuid "50be4a78-1be7-494d-9f99-b8ba9574b756")
+		)
+		(pin "5"
+			(uuid "9dd20d99-c9b6-48d9-a3e0-bfbdfc4e4638")
 		)
 		(instances
 			(project "cerebro"
@@ -6030,7 +6091,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.80mm"
 			(at 52.07 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6184,7 +6245,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Buzzer_Beeper:Buzzer_12x9.5RM7.6"
+		(property "Footprint" "IGNIS1:Buzzer_D12_P8.41"
 			(at 256.54 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -6233,7 +6294,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 186.69 68.58 0)
+		(at 189.23 68.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6243,7 +6304,7 @@
 		(dnp no)
 		(uuid "36c15e31-5661-445e-9c75-ed450c06da63")
 		(property "Reference" "#PWR_3V3A1"
-			(at 186.69 59.69 0)
+			(at 189.23 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6254,7 +6315,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 186.69 64.008 0)
+			(at 189.23 64.008 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6264,7 +6325,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 186.69 68.58 0)
+			(at 189.23 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6275,7 +6336,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 186.69 68.58 0)
+			(at 189.23 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6286,7 +6347,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 186.69 68.58 0)
+			(at 189.23 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6719,7 +6780,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 226.06 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6761,6 +6822,82 @@
 			(project "cerebro"
 				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
 					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 73.66 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4ec6f805-1a88-40bd-91d9-d5012e43b490")
+		(property "Reference" "#PWR_G05"
+			(at 165.1 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 163.576 77.724 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "de9384a9-2a0f-40c2-8370-ff900f9ab7c6")
+		)
+		(instances
+			(project "cerebro"
+				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
+					(reference "#PWR_G05")
 					(unit 1)
 				)
 			)
@@ -7484,7 +7621,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_THT:LED_D3.0mm"
 			(at 254 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7716,7 +7853,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 186.69 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -8022,7 +8159,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical"
+		(property "Footprint" "Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical"
 			(at 238.76 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -8535,7 +8672,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 262.89 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -8767,7 +8904,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm"
 			(at 71.12 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -8816,7 +8953,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 198.12 67.31 0)
+		(at 203.2 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8826,7 +8963,7 @@
 		(dnp no)
 		(uuid "bf098b5a-67ad-48ea-9f61-b34789f1925c")
 		(property "Reference" "#PWR_3V3B1"
-			(at 198.12 58.42 0)
+			(at 203.2 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8837,7 +8974,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 198.12 63.246 0)
+			(at 203.2 65.786 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8847,7 +8984,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 198.12 67.31 0)
+			(at 203.2 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8858,7 +8995,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 198.12 67.31 0)
+			(at 203.2 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8869,7 +9006,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 198.12 67.31 0)
+			(at 203.2 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8921,7 +9058,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 238.76 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -8999,7 +9136,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
 			(at 156.21 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -9041,82 +9178,6 @@
 			(project "cerebro"
 				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
 					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 90.17 156.21 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "cddb50c0-28d2-436a-a9c1-b55119be0e23")
-		(property "Reference" "#PWR_M5"
-			(at 90.17 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 90.17 160.274 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 90.17 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 90.17 156.21 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f9365d68-49d4-404e-a259-1b6541aabafa")
-		)
-		(instances
-			(project "cerebro"
-				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
-					(reference "#PWR_M5")
 					(unit 1)
 				)
 			)
@@ -9305,7 +9366,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_THT:LED_D3.0mm"
 			(at 229.87 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9355,7 +9416,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 198.12 74.93 0)
+		(at 203.2 77.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9365,7 +9426,7 @@
 		(dnp no)
 		(uuid "df52c9a3-56cc-44c0-a837-58f2ffc7219e")
 		(property "Reference" "#PWR_GC2"
-			(at 198.12 66.04 0)
+			(at 203.2 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9376,7 +9437,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 198.12 79.502 0)
+			(at 203.2 82.042 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9386,7 +9447,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 198.12 74.93 0)
+			(at 203.2 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9397,7 +9458,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 198.12 74.93 0)
+			(at 203.2 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9408,7 +9469,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 198.12 74.93 0)
+			(at 203.2 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9536,7 +9597,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+		(property "Footprint" "IGNIS1:Q_TO92_2N3904_EBC"
 			(at 200.66 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -9740,7 +9801,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 198.12 71.12 0)
+		(at 203.2 73.66 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9750,7 +9811,7 @@
 		(dnp no)
 		(uuid "f4838e3d-c50d-42d9-a958-7d9a493cb745")
 		(property "Reference" "C2"
-			(at 202.438 71.12 0)
+			(at 207.518 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9760,7 +9821,7 @@
 			)
 		)
 		(property "Value" "100uF"
-			(at 191.77 71.12 0)
+			(at 196.85 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9769,8 +9830,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
-			(at 198.12 71.12 0)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.80mm"
+			(at 203.2 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9781,7 +9842,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 198.12 71.12 0)
+			(at 203.2 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9792,7 +9853,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 198.12 71.12 0)
+			(at 203.2 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

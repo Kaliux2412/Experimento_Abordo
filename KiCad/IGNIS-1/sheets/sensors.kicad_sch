@@ -870,28 +870,28 @@
 				)
 				(embedded_fonts no)
 			)
-		  (symbol "IGNIS1:DCDC_Module"
+		  (symbol "IGNIS1:Boost_MT3608"
 		    (pin_names (offset 1.016))
 		    (exclude_from_sim no)
 		    (in_bom yes)
 		    (on_board yes)
 		    (property "Reference" "U" (at -5.08 6.35 0) (effects (font (size 1.27 1.27)) (justify left)))
-		    (property "Value" "DCDC_Module" (at -5.08 -7.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		    (property "Value" "Boost_MT3608" (at -5.08 -7.62 0) (effects (font (size 1.27 1.27)) (justify left)))
 		    (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		    (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		    (property "Description" "DC-DC converter module (VIN/GND/EN/VOUT)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		    (symbol "DCDC_Module_0_1"
+		    (property "Description" "MT3608 adjustable boost module HW-183B (VIN+/VIN-/OUT+/OUT-, sin pin EN)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		    (symbol "Boost_MT3608_0_1"
 		      (rectangle (start -5.08 5.08) (end 5.08 -5.08)
 		        (stroke (width 0.254) (type default)) (fill (type background))))
-		    (symbol "DCDC_Module_1_1"
+		    (symbol "Boost_MT3608_1_1"
 		      (pin power_in line (at -7.62 2.54 0) (length 2.54)
-		        (name "VIN" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+		        (name "VIN+" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
 		      (pin power_in line (at -7.62 -2.54 0) (length 2.54)
-		        (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
-		      (pin input line (at -7.62 0 0) (length 2.54)
-		        (name "EN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+		        (name "VIN-" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
 		      (pin power_out line (at 7.62 2.54 180) (length 2.54)
-		        (name "VOUT" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))))
+		        (name "OUT+" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+		      (pin power_in line (at 7.62 -2.54 180) (length 2.54)
+		        (name "OUT-" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))))
 		(symbol "power:+3V3"
 				(power global)
 				(pin_numbers
@@ -1470,7 +1470,7 @@
 				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/0e642ffe-e4b5-4a4f-ba35-204ac7eed391" (reference "C20") (unit 1))))
 	)
 	(symbol
-		(lib_id "IGNIS1:DCDC_Module")
+		(lib_id "IGNIS1:Boost_MT3608")
 		(at 95.25 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1797,18 +1797,18 @@
 				(path "/5d1facc0-7dac-40de-a8c6-d3ccfbbb88f2/0e642ffe-e4b5-4a4f-ba35-204ac7eed391" (reference "#PWR_S15") (unit 1))))
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 87.63 109.22 0)
+		(lib_id "power:GND")
+		(at 102.87 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "30305e07-20f6-4de5-b283-7617ffa62e17")
-		(property "Reference" "#PWR_S16" (at 87.63 100.33 0) (effects (font (size 1.27 1.27))))
-		(property "Value" "+3V3" (at 87.63 118.11 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 87.63 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Datasheet" "~" (at 87.63 109.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Reference" "#PWR_S16" (at 102.87 102.87 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "GND" (at 102.87 120.65 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "" (at 102.87 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 102.87 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(pin "1" (uuid "35aa6929-d1fd-4194-801a-b23c73519521"))
 		(instances
 			(project "IGNIS-1"
