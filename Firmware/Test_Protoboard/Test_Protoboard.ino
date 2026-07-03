@@ -71,6 +71,13 @@ TinyGPSPlus gps;
 bool okBME=false, okMPU=false, okSD=false, okLoRa=false;
 uint32_t seq=0;
 
+// ---------- offsets de calibracion MPU6050 ----------
+// Se calculan en reposo al boot. Accel: se asume placa plana, Z arriba
+// (az debe quedar ~9.81 m/s2, ax/ay ~0). Gyro: los tres ejes ~0 rad/s.
+const float G0 = 9.80665;          // gravedad estandar (m/s2)
+float axOff=0, ayOff=0, azOff=0;   // bias accel (m/s2)
+float gxOff=0, gyOff=0, gzOff=0;   // bias gyro (rad/s)
+
 void beep(int ms){ digitalWrite(BUZZER,HIGH); delay(ms); digitalWrite(BUZZER,LOW); }
 void line(){ Serial.println(F("------------------------------------------")); }
 
@@ -89,6 +96,30 @@ void i2cScan(){
   }
   Serial.printf("   %d dispositivo(s)\n", n);
 }
+
+#if TEST_MPU6050
+// Promedia N muestras en reposo y calcula los offsets.
+// IMPORTANTE: la placa debe estar quieta y plana durante la calibracion.
+void calibrarMPU(int n=1000){
+  Serial.printf("[MPU6050] calibrando (%d muestras, no mover)...\n", n);
+  double sax=0,say=0,saz=0, sgx=0,sgy=0,sgz=0;
+  sensors_event_t a,g,tmp;
+  for(int i=0;i<n;i++){
+    mpu.getEvent(&a,&g,&tmp);
+    sax+=a.acceleration.x; say+=a.acceleration.y; saz+=a.acceleration.z;
+    sgx+=g.gyro.x;         sgy+=g.gyro.y;         sgz+=g.gyro.z;
+    delay(2);
+  }
+  axOff = sax/n;           // en reposo plano ax~0 -> todo es bias
+  ayOff = say/n;           // ay~0 -> todo es bias
+  azOff = saz/n - G0;      // az debe ser G0; el exceso es bias
+  gxOff = sgx/n;           // gyro en reposo ~0 -> todo es bias
+  gyOff = sgy/n;
+  gzOff = sgz/n;
+  Serial.printf("[MPU6050] offset accel: ax=%.3f ay=%.3f az=%.3f m/s2\n", axOff, ayOff, azOff);
+  Serial.printf("[MPU6050] offset gyro:  gx=%.4f gy=%.4f gz=%.4f rad/s\n", gxOff, gyOff, gzOff);
+}
+#endif
 
 void setup(){
   Serial.begin(115200);
@@ -115,8 +146,10 @@ void setup(){
   if(okMPU){
     mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
     mpu.setGyroRange(MPU6050_RANGE_500_DEG);
+    mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);   // filtra ruido antes de calibrar
   }
   Serial.printf("[MPU6050] %s\n", okMPU ? "PASS" : "FAIL");
+  if(okMPU) calibrarMPU();
 #endif
 
 #if TEST_MQ135
@@ -176,8 +209,11 @@ void loop(){
 #if TEST_MPU6050
   if(okMPU){
     sensors_event_t a,g,tmp; mpu.getEvent(&a,&g,&tmp);
-    Serial.printf("MPU6050: ax=%.2f ay=%.2f az=%.2f m/s2 | gz=%.2f rad/s\n",
-                  a.acceleration.x, a.acceleration.y, a.acceleration.z, g.gyro.z);
+    // resta offsets: accel debe dar ~0/0/9.81 en reposo, gyro ~0/0/0
+    float ax=a.acceleration.x-axOff, ay=a.acceleration.y-ayOff, az=a.acceleration.z-azOff;
+    float gx=g.gyro.x-gxOff, gy=g.gyro.y-gyOff, gz=g.gyro.z-gzOff;
+    Serial.printf("MPU6050: ax=%.2f ay=%.2f az=%.2f m/s2 | gx=%.3f gy=%.3f gz=%.3f rad/s\n",
+                  ax, ay, az, gx, gy, gz);
   }
 #endif
 
