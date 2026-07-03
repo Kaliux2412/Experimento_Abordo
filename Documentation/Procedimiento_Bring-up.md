@@ -214,5 +214,62 @@ batería baje (el TPS63020 lo mantiene de 3.0 a 4.2V de entrada).
 
 ---
 
+## Bitácora de bring-up
+
+Registro cronológico de lo hecho en protoboard real, hallazgos y fixes. El procedimiento de
+arriba es la guía; esto es el récord de qué pasó de verdad.
+
+### 2026-07-01/02 — Primera sesión completa
+
+**Sensores probados (Pasos 1-6):** BME280 ✓, MPU6050 ✓, MQ-135 ✓ (responde, warmup normal),
+GPS NEO-6M ✓ recibe NMEA (UART OK, sin fix por falta de antena — esperado en interior).
+
+**Bug de pinout ESP32 corregido.** Símbolo `ESP32_DevKit_40` en KiCad tenía un pin de más
+corrido (le faltaba un 3V3, el resto de la fila se recorría). Pin18 decía "5V" (debía ser
+3V3) y pin20 decía "GND" (debía ser 5V) — y el esquemático amarraba GND justo a ese pin20,
+es decir tenía un GND cableado sobre lo que físicamente es el pin 5V del DevKit real. Se
+corrigió símbolo + caché del `.kicad_sch` + wiring (se quitó el GND mal puesto, se dejó
+no-connect). ERC 0/0 después del fix. Verificado contra pinout oficial Freenove.
+Detalle técnico completo: sección 8 de `Guia_Educativa_Diseno_PCB.md`.
+
+**Calibración de MPU6050 agregada al sketch.** `az` leía 13.1 m/s² en reposo (debía ser
+9.81 — offset de fábrica sin calibrar). Se agregó rutina `calibrarMPU()` que promedia 1000
+muestras al boot (placa quieta) y resta el bias de los 3 ejes de accel y gyro. Resultado
+tras fix: az≈9.81, gx/gy/gz≈0.000. **La placa debe estar plana y quieta al arrancar** — la
+calibración se recalcula cada boot.
+
+**Investigación de carga de batería (TP4056).** Dejamos la batería cargando toda la noche
+(ESP32 conectado y corriendo el sketch, alimentado por el mismo circuito) para que el
+MQ-135 hiciera warmup largo. LED del TP4056 se quedó en rojo (cargando) sin cambiar en 8+
+horas.
+
+- *Diagnóstico:* `chars` del GPS (contador acumulado desde boot) daba solo ~90 min de
+  uptime, no 8h — el ESP se había reseteado en algún punto de la noche. Indicio de
+  brownout (caída de voltaje) mientras cargaba.
+- *Causa raíz confirmada:* el ESP32 estaba alimentado desde OUT+ del TP4056 **al mismo
+  tiempo** que cargaba. La corriente que consume el ESP se suma a la corriente de carga
+  vista por el chip 4056D, así que la corriente total nunca bajaba al umbral de
+  "terminado" (~C/10) aunque la batería ya estuviera casi llena — la carga nunca se
+  declaraba completa mientras hubiera carga conectada.
+- *Prueba:* se desconectó el ESP32 (solo batería + TP4056). El LED cambió de rojo a azul
+  **casi instantáneo** — sospechoso de un corte abrupto por desaparición de carga, no de
+  una transición orgánica de fin de carga. Se midió voltaje real en B+/B- con multímetro:
+  **4.21V** → confirmado, sí estaba genuinamente cargada.
+- **Regla operativa (ya estaba en el Paso 7 pero se violó en la práctica):** NUNCA
+  alimentar el ESP32/carga desde el TP4056 mientras carga. Cargar la batería sola,
+  desconectada de todo consumo, y solo después conectarla al sistema.
+
+**Pendiente — monitoreo de batería (propuesto, no implementado aún):**
+- *Voltaje/SOC:* divisor 100k/100k desde `+BATT` (antes del TPS63020, no después — el
+  buck-boost siempre da 3.3V fijo sin importar la carga) a GPIO34 (ADC1, libre, input-only).
+  4.2V→2.1V, 3.0V→1.5V en el ADC, dentro de rango seguro. Curva LiPo no es lineal — sirve
+  más para detectar "batería baja" (umbral) que % preciso sin calibración.
+- *Flag digital de "carga completa" real:* tapear el pin que maneja el LED de "done" del
+  TP4056 (activo-bajo típico) a un GPIO con pull-up, para leer el estado del chip 4056D
+  directo en vez de inferirlo por voltaje. Pendiente confirmar con multímetro cuál pin es
+  cuál en el módulo HW-373 específico (no hay datasheet confiable del clon).
+
+---
+
 *IGNIS-1 — equipo Ignitia. Procedimiento de bring-up en protoboard. Reglas de seguridad y
 divisor del MQ-135 son obligatorias, no opcionales.*

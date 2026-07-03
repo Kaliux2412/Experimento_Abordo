@@ -5,7 +5,8 @@
 > tú mismo en lugar de copiar.
 >
 > Cubre: capacitores de desacoplo, mapeo de capacitores por placa, plano de tierra (GND
-> pour) en la placa de radio, geometría de la traza de antena y *stitching vias*.
+> pour) en la placa de radio, geometría de la traza de antena, *stitching vias*, buses de
+> comunicación y verificación de pinout contra el datasheet.
 > Proyecto: IGNIS-1 (3 placas apiladas — Cerebro / Sensores / RF). KiCad 10.
 
 ---
@@ -269,7 +270,64 @@ Regla mental: **poco dato y ahorrar pines → I²C; mucho dato y velocidad → S
 
 ---
 
-## 8. Glosario rápido
+## 8. Verificar el pinout del símbolo contra el datasheet
+
+Durante el bring-up en protoboard apareció un bug que vale la pena estudiar, porque es de
+los que **no se ven en la pantalla** y solo salen cuando conectas el hardware real.
+
+### Qué pasó
+El símbolo del ESP32 en la librería (`ESP32_DevKit_40`) tenía la numeración de pines
+**corrida por uno** (*off-by-one*) en la fila inferior izquierda: le faltaba un pin `3V3`.
+Consecuencia en cadena:
+
+| Pin físico | Lo que decía el símbolo | Lo correcto (Freenove) |
+|---|---|---|
+| 18 | 5V | **3V3** |
+| 19 | 5V | 5V |
+| 20 | GND | **5V** |
+
+Y peor: en el esquemático había una **tierra (GND) cableada al pin 20**. Pero el pin 20
+físico del DevKit es **5V**, no GND. Si esa placa se hubiera fabricado y poblado tal cual,
+al encender habrías **cortocircuitado el riel de 5V contra tierra** a través de esa pista.
+Humo casi seguro.
+
+### Cómo se detectó
+No lo encontró ninguna herramienta automática — el **ERC daba 0 errores**, porque desde el
+punto de vista del software todo era coherente (un pin de poder conectado a una tierra es
+"válido"). Lo detectó una persona **comparando el pinout impreso en la placa física real**
+contra lo que decía el diseño. Esa es la lección central.
+
+### La regla
+> **El símbolo no es la verdad. El datasheet (o la serigrafía del módulo físico) es la
+> verdad.** Antes de rutear, verifica pin por pin el símbolo contra la fuente oficial.
+
+- Consigue el **pinout oficial** del fabricante (aquí, el PDF/PNG de Freenove). No confíes
+  en un símbolo bajado de internet ni en uno hecho a mano sin revisar.
+- Revisa **especialmente los pines de alimentación** (3V3, 5V, GND). Un GPIO mal numerado
+  te da un bug de firmware molesto; un **pin de poder mal numerado te quema hardware**.
+- Ojo con los *off-by-one*: si un pin está mal, **todos los de esa fila a partir de ahí**
+  suelen estar corridos. Cuenta la fila completa, no solo el pin sospechoso.
+
+### Por qué el ERC no lo atrapa
+El ERC (Electrical Rules Check) verifica **coherencia interna** del esquemático: que no
+haya dos salidas peleando, que los pines de poder tengan su bandera, etc. **No sabe** cómo
+es el chip real por dentro — usa la definición del símbolo como su única "verdad". Si el
+símbolo está mal, el ERC valida el error con cara de satisfacción. **ERC limpio ≠ diseño
+correcto.** Es condición necesaria, no suficiente.
+
+### Dónde se corrige (y el detalle de la caché)
+El pinout vive en **dos lugares** que hay que sincronizar:
+1. La **librería** de símbolos (`.kicad_sym`) — la definición maestra.
+2. Una **copia en caché dentro de cada esquemático** (`.kicad_sch`, bloque `lib_symbols`).
+   KiCad guarda una copia local para que el proyecto abra aunque la librería no esté.
+
+Corregir solo la librería **no basta**: el esquemático sigue usando su copia vieja hasta
+que hagas *Update Symbols from Library*. Y tras arreglar el esquemático, hay que propagar
+al layout con **Update PCB from Schematic (F8)**. Orden: **símbolo → esquemático → PCB.**
+
+---
+
+## 9. Glosario rápido
 
 | Término | Qué es |
 |---|---|
@@ -296,6 +354,10 @@ Regla mental: **poco dato y ahorrar pines → I²C; mucho dato y velocidad → S
 | **Full-duplex** | Manda y recibe al mismo tiempo (SPI). |
 | **UART** | Comunicación serie punto a punto de 2 líneas cruzadas (TX↔RX). Para el GPS. |
 | **ADC** | Convertidor analógico-digital: mide un voltaje (MQ-135). |
+| **ERC** | Electrical Rules Check: verifica coherencia interna del esquemático. No sabe si el símbolo refleja el chip real. |
+| **Off-by-one** | Error de conteo de uno: aquí, numeración de pines corrida que desplaza toda una fila. |
+| **Datasheet / pinout** | Documento oficial del fabricante; la única fuente de verdad para pines y valores. |
+| **lib_symbols (caché)** | Copia local del símbolo dentro del `.kicad_sch`; hay que actualizarla tras editar la librería. |
 
 ---
 
