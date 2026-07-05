@@ -640,13 +640,13 @@
         "uuid": "74f32100-bf0b-42ea-8f65-2ce920f7760a"
       }
     ],
-    "used_designators": "#PWR_S16",
+    "used_designators": "D2,#PWR_M24-25,R10,#PWR_S16",
     "variants": []
   },
   "sheets": [
     [
       "74f32100-bf0b-42ea-8f65-2ce920f7760a",
-      "sensores"
+      "energia"
     ]
   ],
   "text_variables": {},

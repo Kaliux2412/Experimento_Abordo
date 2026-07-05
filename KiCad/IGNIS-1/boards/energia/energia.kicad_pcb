@@ -715,7 +715,7 @@
 	(footprint "IGNIS1:MT3608_module"
 		(layer "F.Cu")
 		(uuid "5a48d8d7-eac2-49dd-813a-323af7f2a136")
-		(at 106.1 97.925)
+		(at 100.33 83.82)
 		(descr "MT3608 adjustable boost module (HW-183B) - 31x17.5mm - 4 THT posts 26.4x14.1mm. Module mounts face-up, pins down (mezzanine). Top view 1:1, no mirror. Pad1=VIN+ TL, 2=VIN- BL, 3=OUT+ TR, 4=OUT- BR.")
 		(property "Reference" "U3"
 			(at 0 -10 0)
@@ -973,7 +973,7 @@
 	(footprint "Capacitor_THT:CP_Radial_D8.0mm_P3.80mm"
 		(layer "F.Cu")
 		(uuid "7361b888-cbbf-4bd6-9423-a7d961829529")
-		(at 108.585 118.745)
+		(at 120.752349 110.49)
 		(descr "CP, Radial series, Radial, pin pitch=3.80mm, diameter=8mm, height=14mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 3.80mm diameter 8mm height 14mm Electrolytic Capacitor")
 		(property "Reference" "C5"
@@ -2797,7 +2797,7 @@
 	(footprint "Capacitor_THT:CP_Radial_D13.0mm_P5.00mm"
 		(layer "F.Cu")
 		(uuid "dced650d-938c-48d5-9359-a3398d30137d")
-		(at 92.71 118.745)
+		(at 120.239785 95.885)
 		(descr "CP, Radial series, Radial, pin pitch=5.00mm, diameter=13mm, height=20mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 5.00mm diameter 13mm height 20mm Electrolytic Capacitor")
 		(property "Reference" "C4"

@@ -81,12 +81,13 @@
 
 **Borrar**
 - [ ] Conector 2×10 **J40 completo** (wires +3V3 p1, VSW p20, GND).
+- [ ] **U2 (TPS63020) + C1 + C2** → se mueven a energia. carga ya no regula 3V3, solo carga batería + saca VSW.
 
 **Agregar**
 - [ ] Símbolo `IGNIS1:J_PWR_2x4`, ref **J50**.
 
 **Recablear**
-- [ ] J50: `p1=+3V3` (salida de U2), `p5=VSW` (entrada de U2), `p2/4/6/8=GND`, `p3(+5V)=NC`.
+- [ ] J50: `p5=VSW` (salida de switch/batería), `p2/4/6/8=GND`, `p1(+3V3)=NC`, `p3(+5V)=NC`.
 
 ---
 
@@ -97,11 +98,12 @@
 
 **Agregar**
 - [ ] Símbolo `IGNIS1:J_PWR_2x4`, ref **J50**.
+- [ ] **U2 (TPS63020) + C1 + C2** (desde carga): `VSW → U2 → +3V3`; C1 en VSW, C2 en +3V3.
 - [ ] *(rebalanceo)* **D2 + R10** (LED power-on desde cerebro): `+3V3 → R10 → D2 → GND`.
 - [ ] *(rebalanceo)* **C6 220µF** (era C4 de sensores): `+5V → C6 → GND`.
 
 **Recablear**
-- [ ] J50: `p3=+5V` (salida de U3), `p5=VSW` (entrada de U3), `p2/4/6/8=GND`, `p1(+3V3)=NC`.
+- [ ] J50: `p1=+3V3` (salida de U2), `p3=+5V` (salida de U3), `p5=VSW` (entrada de U2 y U3), `p2/4/6/8=GND`.
 
 ---
 
