@@ -81,7 +81,7 @@
 
 **Borrar**
 - [ ] Conector 2×10 **J40 completo** (wires +3V3 p1, VSW p20, GND).
-- [ ] **U2 (TPS63020) + C1 + C2** → se mueven a energia. carga ya no regula 3V3, solo carga batería + saca VSW.
+- [x] **U2 (TPS63020) + C1 + C2** → movidos a energia por script (verificado netlist). carga ya no regula 3V3, solo carga batería + saca VSW.
 
 **Agregar**
 - [ ] Símbolo `IGNIS1:J_PWR_2x4`, ref **J50**.
@@ -98,7 +98,7 @@
 
 **Agregar**
 - [ ] Símbolo `IGNIS1:J_PWR_2x4`, ref **J50**.
-- [ ] **U2 (TPS63020) + C1 + C2** (desde carga): `VSW → U2 → +3V3`; C1 en VSW, C2 en +3V3.
+- [x] **U2 (TPS63020) + C1 + C2** (desde carga): movidos por script a X≈200-241 (verificado). Reubícalos en GUI si molestan — selecciona símbolo **+ sus labels** juntos (box select) para no desconectar.
 - [ ] *(rebalanceo)* **D2 + R10** (LED power-on desde cerebro): `+3V3 → R10 → D2 → GND`.
 - [ ] *(rebalanceo)* **C6 220µF** (era C4 de sensores): `+5V → C6 → GND`.
 
