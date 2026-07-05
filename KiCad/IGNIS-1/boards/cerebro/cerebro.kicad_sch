@@ -2835,6 +2835,208 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "IGNIS1:J_PWR_2x4"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "J_PWR_2x4"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "IGNIS1:J_PWR_2x4_Keyed"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "IGNIS-1 power backplane header 2x4 keyed. 1=+3V3 2=GND 3=+5V 4=GND 5=VSW 6=GND (pin7=KEY omitted) 8=GND."
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "J_PWR_2x4_0_1"
+				(rectangle
+					(start -5.08 6.35)
+					(end 5.08 -6.35)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "J_PWR_2x4_1_1"
+				(pin passive line
+					(at -7.62 3.81 0)
+					(length 2.54)
+					(name "+3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 3.81 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 1.27 0)
+					(length 2.54)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 1.27 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -1.27 0)
+					(length 2.54)
+					(name "VSW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -1.27 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -3.81 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "IGNIS1:TPS63020"
 			(pin_names
 				(offset 1.016)
@@ -3961,6 +4163,10 @@
 		(uuid "02bb46da-9c78-400f-bac2-3cffdb40a2d5")
 	)
 	(no_connect
+		(at 118.11 69.85)
+		(uuid "045b23b7-ba17-4c6b-8d45-072ce7ded3d3")
+	)
+	(no_connect
 		(at 104.14 113.03)
 		(uuid "06825be4-fe76-427b-b299-a2f84f4ca241")
 	)
@@ -3981,12 +4187,12 @@
 		(uuid "65b9951d-0045-4a5d-8167-1fff732f5193")
 	)
 	(no_connect
-		(at 233.68 34.29)
-		(uuid "67c5807c-2ee0-47ac-983e-73f018081d7c")
-	)
-	(no_connect
 		(at 104.14 115.57)
 		(uuid "6bf619bb-ac7f-4db9-9345-fcd907d172ea")
+	)
+	(no_connect
+		(at 118.11 72.39)
+		(uuid "7617b822-b734-4abd-b5b7-54ce31974436")
 	)
 	(no_connect
 		(at 104.14 138.43)
@@ -4000,7 +4206,7 @@
 		(at 139.7 146.05)
 		(uuid "a909be16-8228-41ee-8828-bc84e1a6a53e")
 	)
-		(no_connect
+	(no_connect
 		(at 104.14 151.13)
 		(uuid "b04b973d-cb2c-4e8c-a9fc-c90a3d618c6a")
 	)
@@ -4020,25 +4226,7 @@
 		(at 104.14 156.21)
 		(uuid "d6cc9e99-4792-4a27-ae4a-708085350176")
 	)
-	(no_connect
-		(at 233.68 54.61)
-		(uuid "dfd4f174-97da-4326-a40c-4b1c77aa15fa")
-	)
-	(no_connect
-		(at 246.38 54.61)
-		(uuid "f9608e22-ca60-46b5-8d37-f1b56838120d")
-	)
 	(wire
-		(pts
-			(xy 252.73 49.53) (xy 246.38 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00f8e91c-4759-4053-9537-a4eee7148f83")
-	)
-		(wire
 		(pts
 			(xy 233.68 44.45) (xy 215.9 44.45)
 		)
@@ -4070,16 +4258,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 34.29) (xy 246.38 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11a403a4-d958-4b31-b45e-19e13bd24980")
-	)
-	(wire
-		(pts
 			(xy 156.21 138.43) (xy 139.7 138.43)
 		)
 		(stroke
@@ -4108,7 +4286,17 @@
 		)
 		(uuid "1deb53d2-830e-4391-87c0-6d0ff9087d0a")
 	)
-		(wire
+	(wire
+		(pts
+			(xy 113.03 67.31) (xy 118.11 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d4d3b80-bcbd-4906-a586-71dfa1f6df17")
+	)
+	(wire
 		(pts
 			(xy 104.14 120.65) (xy 90.17 120.65)
 		)
@@ -4139,26 +4327,6 @@
 		(uuid "40aa004f-fcbd-4ba3-9f33-82db0efd3263")
 	)
 	(wire
-		(pts
-			(xy 252.73 44.45) (xy 246.38 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4294c3dc-cda2-4188-967f-842ca27f80aa")
-	)
-	(wire
-		(pts
-			(xy 252.73 46.99) (xy 246.38 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "457ec3ba-80ba-4351-8516-83ec1bfe3183")
-	)
-		(wire
 		(pts
 			(xy 104.14 143.51) (xy 90.17 143.51)
 		)
@@ -4210,13 +4378,13 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 46.99) (xy 228.6 46.99)
+			(xy 133.35 69.85) (xy 144.78 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5f71a6d8-f1b0-45f3-b054-3a0329067e50")
+		(uuid "5d0d6cc0-773e-41a0-80e8-e14241f1c2db")
 	)
 	(wire
 		(pts
@@ -4230,7 +4398,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 73.66) (xy 59.69 68.58)
+			(xy 53.34 69.85) (xy 53.34 64.77)
 		)
 		(stroke
 			(width 0)
@@ -4290,6 +4458,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.35 67.31) (xy 148.59 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "874ee447-5d22-4be4-8b66-b3802797fca9")
+	)
+	(wire
+		(pts
 			(xy 250.19 78.74) (xy 243.84 78.74)
 		)
 		(stroke
@@ -4298,9 +4476,9 @@
 		)
 		(uuid "88c08d47-8e32-4490-9172-68ca3cfe8a0d")
 	)
-		(wire
+	(wire
 		(pts
-			(xy 233.68 31.75) (xy 222.25 31.75)
+			(xy 233.68 31.75) (xy 219.71 31.75)
 		)
 		(stroke
 			(width 0)
@@ -4310,15 +4488,15 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 41.91) (xy 246.38 41.91)
+			(xy 148.59 67.31) (xy 148.59 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "958cb982-6eda-411e-a4d5-62c1b381cca5")
+		(uuid "930d491b-cbc6-41df-8aa6-2001ff7170f1")
 	)
-		(wire
+	(wire
 		(pts
 			(xy 162.56 148.59) (xy 139.7 148.59)
 		)
@@ -4339,16 +4517,6 @@
 		(uuid "a2d13b9b-f87b-4fb6-b1e0-850b323d8f32")
 	)
 	(wire
-		(pts
-			(xy 233.68 36.83) (xy 228.6 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2d94a5f-a351-4d03-988e-3a8142d496e0")
-	)
-			(wire
 		(pts
 			(xy 251.46 110.49) (xy 254 110.49)
 		)
@@ -4378,7 +4546,7 @@
 		)
 		(uuid "afbbb634-972d-4e43-9525-de8ae9e5fa8e")
 	)
-		(wire
+	(wire
 		(pts
 			(xy 158.75 151.13) (xy 139.7 151.13)
 		)
@@ -4388,7 +4556,7 @@
 		)
 		(uuid "b2caca74-1d7a-4125-8310-ae67bfc54afa")
 	)
-		(wire
+	(wire
 		(pts
 			(xy 146.05 128.27) (xy 139.7 128.27)
 		)
@@ -4427,26 +4595,6 @@
 			(type default)
 		)
 		(uuid "c4466eb4-eb83-4f60-87a0-1681253c3db9")
-	)
-		(wire
-		(pts
-			(xy 252.73 39.37) (xy 246.38 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7dbf5ef-154a-4b15-a5a4-1ef856daa771")
-	)
-	(wire
-		(pts
-			(xy 233.68 41.91) (xy 228.6 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc617cec-acba-4d99-b033-b84b415188b1")
 	)
 	(wire
 		(pts
@@ -4500,33 +4648,23 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 39.37) (xy 228.6 39.37)
+			(xy 133.35 74.93) (xy 135.89 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dd535ddb-60d5-4787-8c12-39a21bcbe9db")
+		(uuid "dbff49c1-a929-4e4b-a5e9-95ead23f059c")
 	)
 	(wire
 		(pts
-			(xy 233.68 52.07) (xy 228.6 52.07)
+			(xy 133.35 72.39) (xy 140.97 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e1f00147-1c47-4841-825f-c61d68a394b9")
-	)
-	(wire
-		(pts
-			(xy 233.68 49.53) (xy 228.6 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e8100b94-d47c-41bd-aa05-bf57d87c4330")
+		(uuid "e6e3116c-3f69-40cd-b550-90f4b86016d3")
 	)
 	(wire
 		(pts
@@ -4547,16 +4685,6 @@
 			(type default)
 		)
 		(uuid "eb8e4978-50f8-4a9e-9307-c51c2b6b041f")
-	)
-	(wire
-		(pts
-			(xy 252.73 36.83) (xy 246.38 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ebd40c55-1841-4fc4-a1d7-5c812f9ddc9f")
 	)
 	(wire
 		(pts
@@ -4588,17 +4716,7 @@
 		)
 		(uuid "f8a6a3ea-e40d-4f0d-b138-d630ee507bde")
 	)
-		(wire
-		(pts
-			(xy 252.73 52.07) (xy 246.38 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd936ff7-6220-440c-96a4-7c4ea44bd1bd")
-	)
-						(label "STATUS"
+	(label "STATUS"
 		(at 262.89 66.04 0)
 		(effects
 			(font
@@ -4658,7 +4776,7 @@
 		)
 		(uuid "bf6e3a3a-30d7-42e1-b2de-d88bf7df0373")
 	)
-		(label "BUZZ_C"
+	(label "BUZZ_C"
 		(at 245.11 115.57 0)
 		(effects
 			(font
@@ -4668,7 +4786,7 @@
 		)
 		(uuid "dc26f6d7-fdb1-4ad0-b591-9db85fba16a3")
 	)
-			(global_label "MOSI"
+	(global_label "MOSI"
 		(shape input)
 		(at 146.05 110.49 0)
 		(fields_autoplaced yes)
@@ -4691,9 +4809,33 @@
 			)
 		)
 	)
+	(global_label "SDA"
+		(shape input)
+		(at 267.97 31.75 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0ce415eb-a78c-46af-a9e0-61db2d5b8242")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 274.5233 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "MISO"
 		(shape input)
-		(at 252.73 46.99 0)
+		(at 262.89 46.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4703,7 +4845,7 @@
 		)
 		(uuid "18287818-b3b1-4f7a-b8d8-608efad1efab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 46.99 0)
+			(at 262.89 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4716,7 +4858,7 @@
 	)
 	(global_label "SCK"
 		(shape input)
-		(at 252.73 44.45 0)
+		(at 262.89 44.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4726,7 +4868,7 @@
 		)
 		(uuid "1ee68229-c3b3-47f4-a6c0-836ae892d1ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 44.45 0)
+			(at 262.89 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4739,7 +4881,7 @@
 	)
 	(global_label "NSS_LORA"
 		(shape input)
-		(at 252.73 49.53 0)
+		(at 262.89 49.53 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4749,7 +4891,7 @@
 		)
 		(uuid "26453b70-d0f5-424b-b800-8fcd0a422844")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 49.53 0)
+			(at 262.89 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4786,7 +4928,7 @@
 	)
 	(global_label "LORA_RST"
 		(shape input)
-		(at 252.73 52.07 0)
+		(at 262.89 52.07 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4796,7 +4938,7 @@
 		)
 		(uuid "32e31cc0-2bc4-4bf8-a785-287438dae793")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 52.07 0)
+			(at 262.89 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4809,7 +4951,7 @@
 	)
 	(global_label "SCL"
 		(shape input)
-		(at 252.73 36.83 0)
+		(at 262.89 36.83 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4819,7 +4961,7 @@
 		)
 		(uuid "4cadb333-4c35-4f54-b915-871dd5ee8eca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 36.83 0)
+			(at 262.89 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4902,19 +5044,19 @@
 			)
 		)
 	)
-	(global_label "SDA"
+	(global_label "+3V3"
 		(shape input)
-		(at 228.6 36.83 180)
+		(at 40.64 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "8af9ea3b-d08d-4245-87ec-f97da7f80f76")
+		(uuid "7b1b82ed-ae73-4570-be4e-9ce1e0023a02")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 222.0467 36.83 0)
+			(at 40.64 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4922,7 +5064,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 	)
@@ -4952,7 +5093,7 @@
 	)
 	(global_label "GPS_TX"
 		(shape input)
-		(at 252.73 39.37 0)
+		(at 262.89 39.37 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4962,7 +5103,7 @@
 		)
 		(uuid "995c2e6b-4f68-41e1-9c14-4e8bddeea25c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 39.37 0)
+			(at 262.89 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5021,7 +5162,7 @@
 	)
 	(global_label "MPU_INT"
 		(shape input)
-		(at 228.6 39.37 180)
+		(at 201.93 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5031,7 +5172,7 @@
 		)
 		(uuid "a95dffc1-a369-4ab7-8ad7-d2972deb9e9e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 217.6924 39.37 0)
+			(at 191.0224 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5045,7 +5186,7 @@
 	)
 	(global_label "GPS_RX"
 		(shape input)
-		(at 228.6 41.91 180)
+		(at 201.93 41.91 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5055,7 +5196,7 @@
 		)
 		(uuid "b32595bf-8d78-44b5-89cd-ccd7c8c70db1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 218.4182 41.91 0)
+			(at 191.7482 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5139,7 +5280,7 @@
 	)
 	(global_label "MOSI"
 		(shape input)
-		(at 228.6 46.99 180)
+		(at 200.66 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5149,7 +5290,7 @@
 		)
 		(uuid "d290f82e-d668-46e3-ad0d-857520d9d1dd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.0186 46.99 0)
+			(at 193.0786 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5163,7 +5304,7 @@
 	)
 	(global_label "DIO0"
 		(shape input)
-		(at 228.6 52.07 180)
+		(at 200.66 52.07 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5173,7 +5314,7 @@
 		)
 		(uuid "d30b0a9e-9680-485e-a962-cdc239be990b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.2 52.07 0)
+			(at 193.26 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5210,7 +5351,7 @@
 	)
 	(global_label "CS_SD"
 		(shape input)
-		(at 228.6 49.53 180)
+		(at 200.66 49.53 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5220,7 +5361,7 @@
 		)
 		(uuid "e31a8ff5-2093-4ad0-a1f2-eedf17ec1d88")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 219.6882 49.53 0)
+			(at 191.7482 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5234,7 +5375,7 @@
 	)
 	(global_label "MQ_AOUT"
 		(shape input)
-		(at 252.73 41.91 0)
+		(at 262.89 41.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5244,7 +5385,7 @@
 		)
 		(uuid "ece715b7-6377-4a05-9feb-dbc1c96dd5e3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 41.91 0)
+			(at 262.89 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5279,7 +5420,7 @@
 			)
 		)
 	)
-			(symbol
+	(symbol
 		(lib_id "power:GND")
 		(at 243.84 78.74 0)
 		(unit 1)
@@ -5623,7 +5764,7 @@
 			)
 		)
 	)
-		(symbol
+	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 52.07 115.57 0)
 		(unit 1)
@@ -5855,7 +5996,7 @@
 			)
 		)
 	)
-			(symbol
+	(symbol
 		(lib_id "power:+3V3")
 		(at 71.12 146.05 0)
 		(unit 1)
@@ -6007,7 +6148,7 @@
 			)
 		)
 	)
-		(symbol
+	(symbol
 		(lib_id "power:GND")
 		(at 52.07 119.38 0)
 		(unit 1)
@@ -6078,6 +6219,82 @@
 			(project "cerebro"
 				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
 					(reference "#PWR_M21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 40.64 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4be025f6-1c7b-49bc-bb6c-5f6d6ffc34ac")
+		(property "Reference" "#FLGX1"
+			(at 40.64 73.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 40.64 66.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.64 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 40.64 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 40.64 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "018b14ae-067d-4f5e-9bd0-ad296cb414f5")
+		)
+		(instances
+			(project "cerebro"
+				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
+					(reference "#FLGX1")
 					(unit 1)
 				)
 			)
@@ -6161,7 +6378,7 @@
 			)
 		)
 	)
-		(symbol
+	(symbol
 		(lib_id "power:GND")
 		(at 220.98 78.74 0)
 		(unit 1)
@@ -6237,7 +6454,83 @@
 			)
 		)
 	)
-		(symbol
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "55000bbc-f90e-4b83-80e6-fd6c04379774")
+		(property "Reference" "#PWR_BP08"
+			(at 135.89 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 135.89 79.248 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 135.89 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c4a14a6a-f845-49ad-b4dd-5a7a2184cd53")
+		)
+		(instances
+			(project "cerebro"
+				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
+					(reference "#PWR_BP08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 238.76 68.58 0)
 		(unit 1)
@@ -6315,7 +6608,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 264.16 34.29 0)
+		(at 219.71 31.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6323,9 +6616,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5a329865-e95a-4f5a-8aa6-171b25f7c213")
-		(property "Reference" "#PWR_BP3"
-			(at 264.16 25.4 0)
+		(uuid "5a3aa3cb-e96f-429f-bcf3-8895ba2f3b1a")
+		(property "Reference" "#PWR_BP09"
+			(at 219.71 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6336,7 +6629,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 266.954 37.846 0)
+			(at 219.71 36.068 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6346,7 +6639,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 264.16 34.29 0)
+			(at 219.71 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6357,7 +6650,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 264.16 34.29 0)
+			(at 219.71 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6368,7 +6661,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 264.16 34.29 0)
+			(at 219.71 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6378,18 +6671,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "2ebd4fc9-ba74-49cd-8194-9cd321b1698f")
+			(uuid "6068f135-e7c5-404a-80d7-ede69042b20d")
 		)
 		(instances
 			(project "cerebro"
 				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
-					(reference "#PWR_BP3")
+					(reference "#PWR_BP09")
 					(unit 1)
 				)
 			)
 		)
 	)
-		(symbol
+	(symbol
 		(lib_id "power:+3V3")
 		(at 66.04 148.59 0)
 		(unit 1)
@@ -6467,7 +6760,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 59.69 68.58 0)
+		(at 53.34 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6477,7 +6770,7 @@
 		(dnp no)
 		(uuid "6ff6d24d-2284-4fa2-a9eb-794e44d23260")
 		(property "Reference" "#FLG_GND1"
-			(at 59.69 59.69 0)
+			(at 53.34 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6488,7 +6781,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 59.69 77.47 0)
+			(at 53.34 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6498,7 +6791,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 68.58 0)
+			(at 53.34 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6509,7 +6802,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 59.69 68.58 0)
+			(at 53.34 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6520,7 +6813,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 59.69 68.58 0)
+			(at 53.34 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6536,6 +6829,82 @@
 			(project "cerebro"
 				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
 					(reference "#FLG_GND1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 148.59 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7599867f-7fee-4352-b307-a5ff025025c2")
+		(property "Reference" "#PWR_BP05"
+			(at 148.59 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 72.898 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9db9987d-1102-4a2d-9150-3e59dbb5935d")
+		)
+		(instances
+			(project "cerebro"
+				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
+					(reference "#PWR_BP05")
 					(unit 1)
 				)
 			)
@@ -6771,7 +7140,7 @@
 			)
 		)
 	)
-			(symbol
+	(symbol
 		(lib_id "Device:R")
 		(at 186.69 106.68 0)
 		(unit 1)
@@ -7002,82 +7371,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 222.25 31.75 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8ded648a-caf2-4447-8f05-c68e4dc9b2c1")
-		(property "Reference" "#PWR_BP1"
-			(at 222.25 22.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 222.25 27.432 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 222.25 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 222.25 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 222.25 31.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "baf21388-c21f-4d43-9dfa-b2bdad29d585")
-		)
-		(instances
-			(project "cerebro"
-				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
-					(reference "#PWR_BP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_02x10_Odd_Even")
 		(at 238.76 41.91 0)
 		(unit 1)
@@ -7099,7 +7392,7 @@
 			)
 		)
 		(property "Value" "Backplane_2x10"
-			(at 244.856 57.658 0)
+			(at 235.458 57.658 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7211,7 +7504,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 59.69 73.66 0)
+		(at 53.34 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7221,7 +7514,7 @@
 		(dnp no)
 		(uuid "9044e97a-1953-4df0-9850-f68b5750a633")
 		(property "Reference" "#FLG_GNDF1"
-			(at 59.69 64.77 0)
+			(at 53.34 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7232,7 +7525,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 59.69 82.55 0)
+			(at 53.34 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7243,7 +7536,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 73.66 0)
+			(at 53.34 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7254,7 +7547,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 59.69 73.66 0)
+			(at 53.34 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7265,7 +7558,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 59.69 73.66 0)
+			(at 53.34 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7281,6 +7574,101 @@
 			(project "cerebro"
 				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
 					(reference "#FLG_GNDF1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "IGNIS1:J_PWR_2x4")
+		(at 125.73 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "93764555-2e71-4645-aaeb-9f992a39ec73")
+		(property "Reference" "J50"
+			(at 125.73 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "J_PWR_2x4"
+			(at 125.73 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "IGNIS1:J_PWR_2x4_Keyed"
+			(at 125.73 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "IGNIS-1 power backplane header 2x4 keyed. 1=+3V3 2=GND 3=+5V 4=GND 5=VSW 6=GND (pin7=KEY omitted) 8=GND."
+			(at 125.73 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "e785166a-3d8c-4d04-9546-10a7d097d76d")
+		)
+		(pin "6"
+			(uuid "ea07e029-dbe1-41ad-80d5-13a3d054bd96")
+		)
+		(pin "3"
+			(uuid "e8c7d85f-3bcc-4d79-a7d5-d4ada3e4debe")
+		)
+		(pin "5"
+			(uuid "5d67f5ee-2f0d-424e-b0b7-4cb606a9f06a")
+		)
+		(pin "2"
+			(uuid "937a89d8-30e1-4953-9722-cb057ca39ed5")
+		)
+		(pin "4"
+			(uuid "15871177-c595-4316-97a9-df816eb23b3c")
+		)
+		(pin "1"
+			(uuid "6ae06da0-a710-4e1e-b7d3-fe6407cb9162")
+		)
+		(instances
+			(project "cerebro"
+				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
+					(reference "J50")
 					(unit 1)
 				)
 			)
@@ -7591,6 +7979,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 113.03 67.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a68664af-ed6d-4295-90c9-14e9c014751b")
+		(property "Reference" "#PWR_M05"
+			(at 113.03 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 113.03 63.246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5b5d4bd1-92b0-47ed-8405-490ba778a025")
+		)
+		(instances
+			(project "cerebro"
+				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
+					(reference "#PWR_M05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 262.89 72.39 0)
 		(unit 1)
@@ -7663,82 +8127,6 @@
 			(project "cerebro"
 				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
 					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-		(symbol
-		(lib_id "power:GND")
-		(at 215.9 44.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ba4b1402-f020-4998-ad68-307c9bf5499c")
-		(property "Reference" "#PWR_BP4"
-			(at 215.9 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 215.9 48.768 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 215.9 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 215.9 44.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f20da412-7d3d-4dc0-ae85-4b3e14dd1f51")
-		)
-		(instances
-			(project "cerebro"
-				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
-					(reference "#PWR_BP4")
 					(unit 1)
 				)
 			)
@@ -7976,82 +8364,6 @@
 			)
 		)
 	)
-			(symbol
-		(lib_id "power:GND")
-		(at 267.97 31.75 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d3dcfdf0-c5d3-49b6-87a8-16ff803debe8")
-		(property "Reference" "#PWR_BP2"
-			(at 267.97 22.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 271.018 34.798 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 267.97 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 267.97 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 267.97 31.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ca676597-e70c-4e3e-a8d4-c840588e25cd")
-		)
-		(instances
-			(project "cerebro"
-				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
-					(reference "#PWR_BP2")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Device:LED")
 		(at 229.87 78.74 0)
@@ -8278,6 +8590,82 @@
 			(project "cerebro"
 				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
 					(reference "#PWR_M7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 140.97 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e470ec5e-45c5-4db0-a071-654f3aea5924")
+		(property "Reference" "#PWR_BP07"
+			(at 140.97 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.97 76.708 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "41beb428-713c-4b47-bfce-9283c026e90c")
+		)
+		(instances
+			(project "cerebro"
+				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
+					(reference "#PWR_BP07")
 					(unit 1)
 				)
 			)
@@ -8595,21 +8983,81 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 248.92 60.96 0)
+		(lib_id "power:GND")
+		(at 144.78 69.85 0)
 		(unit 1)
-		(exclude_from_sim no)(in_bom yes)(on_board yes)(dnp no)
-		(uuid "4be025f6-1c7b-49bc-bb6c-5f6d6ffc34ac")
-		(property "Reference" "#FLGX1" (at 248.92 64.76 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Value" "PWR_FLAG" (at 248.92 57.16 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 248.92 60.96 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Datasheet" "~" (at 248.92 60.96 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(pin "1" (uuid "018b14ae-067d-4f5e-9bd0-ad296cb414f5"))
-		(instances (project "cerebro" (path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d" (reference "#FLGX1") (unit 1))))
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fe124546-3e6f-4bc5-aa3e-f575e8e2579a")
+		(property "Reference" "#PWR_BP06"
+			(at 144.78 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 144.78 74.168 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 144.78 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d2975390-bde2-4db5-ba97-3305bac11805")
+		)
+		(instances
+			(project "cerebro"
+				(path "/c10887eb-b593-4701-9f01-a1eb6ad6d72d"
+					(reference "#PWR_BP06")
+					(unit 1)
+				)
+			)
+		)
 	)
-	(global_label "+3V3" (shape input) (at 248.92 60.96 0) (fields_autoplaced yes)
-		(effects (font (size 1.27 1.27)) (justify left)) (uuid "7b1b82ed-ae73-4570-be4e-9ce1e0023a02")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 248.92 60.96 0) (hide yes) (effects (font (size 1.27 1.27)))))
 	(sheet_instances
 		(path "/"
 			(page "1")

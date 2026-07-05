@@ -640,7 +640,7 @@
         "uuid": "c10887eb-b593-4701-9f01-a1eb6ad6d72d"
       }
     ],
-    "used_designators": "#PWR_G5",
+    "used_designators": "#PWR_M5,#PWR_BP5-9,J1,#PWR_G5",
     "variants": []
   },
   "sheets": [
