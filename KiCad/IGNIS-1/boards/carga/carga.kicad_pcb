@@ -402,7 +402,7 @@
 		(at 93.98 80.01 180)
 		(descr "SS-12D00 SPDT slide switch, 3 pins inline P2.54. Pad2=common (center). Use as SPST on/off with symbol SW_SPST (pin1->pad1 throw, pin2->pad2 common); pad3 = other throw (unused).")
 		(property "Reference" "SW1"
-			(at 0 -3.6 0)
+			(at 3.683 -2.921 0)
 			(layer "F.SilkS")
 			(uuid "af61c3bb-6890-4f0f-b44f-04b5b1f9b78d")
 			(effects
@@ -413,7 +413,7 @@
 			)
 		)
 		(property "Value" "Main_SW"
-			(at 0 3.6 0)
+			(at 3.683 3.048 0)
 			(layer "F.Fab")
 			(uuid "e212523d-ef50-48a1-8b94-f368ea0c354b")
 			(effects
@@ -479,12 +479,12 @@
 			(uuid "71a9464e-e47d-49ed-8d8d-080995dadf6d")
 		)
 		(fp_text user "COM"
-			(at 0 1.6 0)
+			(at 0 -3.175 0)
 			(layer "F.SilkS")
 			(uuid "6c05f786-9ab4-45ff-a2b2-27f4f063d0c1")
 			(effects
 				(font
-					(size 0.7 0.7)
+					(size 0.8 0.8)
 					(thickness 0.12)
 				)
 			)
@@ -1567,7 +1567,7 @@
 			(uuid "b1fcf2ba-036f-4afb-a0e9-a139c6b41616")
 		)
 		(fp_text user "USB-C"
-			(at -11.5 0 0)
+			(at -10.922 -0.254 0)
 			(layer "F.SilkS")
 			(uuid "cd874a2b-df36-405f-9f6b-71ea76184d14")
 			(effects

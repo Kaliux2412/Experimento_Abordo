@@ -1835,7 +1835,7 @@
 		(uuid "1b406082-6938-47f9-9048-b2a3b8c00204")
 		(at 80.908 119.092)
 		(property "Reference" "H4"
-			(at 0 -3.65 0)
+			(at 3.928 -2.252 0)
 			(layer "F.SilkS")
 			(uuid "5500b8fb-b2e9-40a1-b145-75d69a49dd74")
 			(effects
@@ -6295,7 +6295,7 @@
 		(property "Reference" "U2"
 			(at 0 -13 0)
 			(layer "F.SilkS")
-			(uuid "21ea9e4c-c793-450c-879e-c15bad06d7c2")
+			(uuid "b18797c8-f3d1-4e92-bad0-a287decf49a9")
 			(effects
 				(font
 					(size 1 1)
@@ -6306,7 +6306,7 @@
 		(property "Value" "TPS63020"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "ad6f6538-93d2-4101-9657-9f783b17f9f4")
+			(uuid "55e0999b-9166-4531-b533-8f61d4fad9f5")
 			(effects
 				(font
 					(size 1 1)
@@ -6318,7 +6318,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "31ff74fe-efd2-4bdf-820a-0f722cecf0e2")
+			(uuid "91be26d6-55b3-4a47-b4cc-800c41261ef2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6329,7 +6329,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "288fb9ac-6c75-440b-a081-c493b97c0b74")
+			(uuid "504e6cec-bf90-4c16-a32c-36cb9346ed47")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6661,7 +6661,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=5.00mm, diameter=13mm, height=20mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 5.00mm diameter 13mm height 20mm Electrolytic Capacitor")
 		(property "Reference" "C4"
-			(at 2.5 -7.75 0)
+			(at 8.411215 -5.715 0)
 			(layer "F.SilkS")
 			(uuid "df65d374-ad17-48ab-9e6a-5abcf3bb3d81")
 			(effects
