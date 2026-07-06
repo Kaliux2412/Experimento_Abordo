@@ -33,7 +33,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "IGNIS1:BME280_module"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

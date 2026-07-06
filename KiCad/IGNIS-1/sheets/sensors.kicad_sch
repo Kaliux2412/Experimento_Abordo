@@ -1297,7 +1297,7 @@
 		(uuid "f4bc90c0-7b27-4ace-9e67-f119f2b2ba10")
 		(property "Reference" "U20" (at 50.8 62.230000000000004 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "BME280" (at 50.8 80.01 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 50.8 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "IGNIS1:BME280_module" (at 50.8 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "~" (at 50.8 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(pin "1" (uuid "df64bc71-c1b8-46e2-8430-d71fa4ad51c5"))
 		(pin "2" (uuid "145d814f-5328-4f8e-9f60-935856b90b2d"))

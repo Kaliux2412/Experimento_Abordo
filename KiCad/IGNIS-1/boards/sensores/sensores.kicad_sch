@@ -6354,7 +6354,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "BME280 breakout (T/H/P) 4-pin header VIN/GND/SCL/SDA, I2C 3.3V"
 			(at 64.77 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
