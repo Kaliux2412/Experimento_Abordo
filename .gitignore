@@ -18,6 +18,10 @@ _autosave-*
 *.bak
 *.bck
 
+# KiCad preferencias locales de proyecto (viewport, capas visibles, etc.)
+# Cambian con solo abrir el proyecto -> conflictos innecesarios entre colaboradores
+*.kicad_prl
+
 # KiCad cache
 fp-info-cache
 *.kicad_dru
