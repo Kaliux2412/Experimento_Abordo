@@ -1,0 +1,247 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "c028edc6-cd64-4f77-b099-9574a6409b26")
+	(paper "A3")
+	(title_block
+		(title "IGNIS-1 Placa Unificada")
+	)
+	(lib_symbols)
+	(sheet
+		(at 100 30)
+		(size 25 20)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "07f1ebb3-cf8b-4b40-b388-f7335ad4b6d1")
+		(property "Sheetname" "energia"
+			(at 100 29.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sub_energia.kicad_sch"
+			(at 100 50.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "placa_unificada"
+				(path "/c028edc6-cd64-4f77-b099-9574a6409b26"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 135 30)
+		(size 25 20)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "20fd1076-804b-4dd0-81ff-862a289b52fe")
+		(property "Sheetname" "rf"
+			(at 135 29.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sub_rf.kicad_sch"
+			(at 135 50.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "placa_unificada"
+				(path "/c028edc6-cd64-4f77-b099-9574a6409b26"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 170 30)
+		(size 25 20)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e43abde8-b5db-45a0-a848-b40ed708648a")
+		(property "Sheetname" "sensores"
+			(at 170 29.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sub_sensores.kicad_sch"
+			(at 170 50.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "placa_unificada"
+				(path "/c028edc6-cd64-4f77-b099-9574a6409b26"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30 30)
+		(size 25 20)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e848ae39-1eff-4027-ab4f-2c200e326771")
+		(property "Sheetname" "carga"
+			(at 30 29.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sub_carga.kicad_sch"
+			(at 30 50.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "placa_unificada"
+				(path "/c028edc6-cd64-4f77-b099-9574a6409b26"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 65 30)
+		(size 25 20)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f01c4f21-4a63-440c-b5ba-f3f94f47fdc1")
+		(property "Sheetname" "cerebro"
+			(at 65 29.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sub_cerebro.kicad_sch"
+			(at 65 50.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "placa_unificada"
+				(path "/c028edc6-cd64-4f77-b099-9574a6409b26"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
