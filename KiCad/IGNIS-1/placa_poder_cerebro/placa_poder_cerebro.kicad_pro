@@ -54,7 +54,7 @@
           "border_hatch_pitch": 0.5,
           "corner_radius": 0.0,
           "corner_smoothing": 0,
-          "fill_mode": 0,
+          "fill_mode": 1,
           "hatch_gap": 1.5,
           "hatch_orientation": 0.0,
           "hatch_smoothing_level": 0,
@@ -69,7 +69,13 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -203,7 +209,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.5,
+        0.7
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +240,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -515,6 +530,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -637,7 +653,7 @@
         "uuid": "c028edc6-cd64-4f77-b099-9574a6409b26"
       }
     ],
-    "used_designators": "#PWR_M10_B1,#PWR_K2_D1,#FLG01_C1,#PWR_S19_E1,#PWR_K4_D1,#PWR_K13_D1,#FLGX1_E1,#PWR_K12_D1,#PWR_K9_D1,#PWR_M6_B1,#PWR_K11_D1,#PWR_S18_E1,#PWR_M21_B1,#PWR_M26_B1,#PWR_M9_B1,#PWR_S9_E1,#PWR_S12_E1,#PWR_K5_D1,#PWR_K1_D1,#PWR_K10_D1,#FLGB_GND1_D1,#FLGB_3V3_E1,#PWR_M025_C1,#FLG_GNDF1_B1,#PWRF_GND1_E1,#PWR_M11_B1,#PWR_M23_B1,#PWR_S4_E1,#PWR_M1_B1,#PWR_S3_E1,#FLGX1_B1,#FLG02_A1,#FLGB_GND1_E1,#PWR_M3_B1,#PWR_M024_C1,#PWR_M20_B1,#PWR_S13_E1,#FLGB_3V3_D1,#PWR_S5_E1,#FLG02_C1,#PWR_K6_D1,#PWR_S1_E1,#PWR_S2_E1,#PWR_S7_E1,#PWR_M22_B1,#FLG_GND1_B1,#PWR_BP1_D1,#PWR_K3_D1,#PWRF_GND1_D1,#PWR_S11_E1,#PWR_M2_B1,#PWR_M4_B1,#FLG03_A1,#PWR_K8_D1,#FLG01_A1,#PWRF_3V3_D1,#PWR_S10_E1,#PWR_M29_B1,#PWR_M28_B1,#PWR_K7_D1,#PWR_M27_B1,#PWR_M8_B1,#PWRF_3V3_E1,#PWR_M7_B1",
+    "used_designators": "#PWR_M4_B1,#PWR_M2_B1,#PWR_S11_E1,#PWRF_GND1_D1,#PWR_K3_D1,#PWR_S18_E1,#PWR_M21_B1,#PWR_M10_B1,#PWR_K2_D1,#PWR_M1_B1,#PWR_S3_E1,#PWR_M8_B1,#FLGB_GND1_D1,#FLGB_3V3_E1,#PWR_K7_D1,#PWR_M27_B1,#PWR_M6_B1,#PWR_K4_D1,#PWR_M7_B1,#PWRF_3V3_E1,#PWR_M28_B1,#PWRF_3V3_D1,#PWR_S10_E1,#PWR_S19_E1,#FLG01_C1,#PWR_M26_B1,#PWR_K13_D1,#PWR_K10_D1,#PWR_K1_D1,#PWR_M9_B1,#PWR_S9_E1,#PWR_S12_E1,#PWR_K5_D1,#PWR_M29_B1,#PWR_M025_C1,#PWR_M11_B1,#PWR_M23_B1,#PWR_S4_E1,#FLGX1_E1,#PWR_K9_D1,#PWR_K12_D1,#PWR_K11_D1,#PWRF_GND1_E1,#FLG_GNDF1_B1,#FLG02_A1,#FLGX1_B1,#FLGB_GND1_E1,#PWR_M3_B1,#PWR_M024_C1,#PWR_M20_B1,#PWR_S13_E1,#FLGB_3V3_D1,#PWR_S5_E1,#FLG02_C1,#PWR_K6_D1,#PWR_S1_E1,#FLG03_A1,#PWR_K8_D1,#FLG01_A1,#PWR_S2_E1,#PWR_S7_E1,#PWR_M22_B1,#FLG_GND1_B1,#PWR_BP1_D1",
     "variants": []
   },
   "sheets": [
